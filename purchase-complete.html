@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/cabina-icon-64.png" />
+  <meta name="description" content="Cabinaのご購入ありがとうございます。ライセンスキーをご確認ください。" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>ご購入ありがとうございます | Cabina</title>
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/purchase-complete.css" />
+  <script src="js/purchase-complete.js" defer></script>
+</head>
+<body>
+  <header class="complete-header">
+    <a class="complete-brand" href="index.html" aria-label="Cabina トップへ"><img src="assets/cabina-icon-64.png" alt="" width="28" height="28" />Cabina</a>
+  </header>
+
+  <main class="complete-main">
+    <section class="complete-card" aria-labelledby="complete-title">
+      <div class="complete-mark" aria-hidden="true">✓</div>
+      <p class="complete-eyebrow">Cabina</p>
+      <h1 id="complete-title" data-order-title>ライセンスキーを確認しています</h1>
+      <p class="complete-lead" data-order-message aria-live="polite">決済情報を確認しています。このまま少々お待ちください。</p>
+
+      <div class="license-panel" data-license-panel hidden>
+        <p class="license-label">ライセンスキー</p>
+        <code class="license-key" data-license-key></code>
+        <button class="copy-button" type="button" data-copy-button>キーをコピー</button>
+        <p class="copy-status" data-copy-status aria-live="polite"></p>
+        <p class="license-note">必ず控えを取ってください。</p>
+        <a class="installer-link" href="https://github.com/officelib/cabina-releases/releases/latest/download/Cabina-setup.exe">アプリをまだお持ちでない方はこちら<span>Windows版をダウンロード（約343MB）</span></a>
+        <p class="test-mode-note" data-test-mode-note hidden>これはテスト決済です</p>
+      </div>
+
+      <a class="back-link" href="index.html">Cabinaのページに戻る</a>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Cabina — スクリーンショットを、待たずに使える場所へ。</title>
+  <desc id="description">Cabinaの実アイコンと実際のアプリ画面を使ったSNS共有カード</desc>
+  <defs>
+    <radialGradient id="aquaGlow" cx="0" cy="1" r="0.9">
+      <stop offset="0" stop-color="#bdf9f5" stop-opacity="0.95" />
+      <stop offset="1" stop-color="#bdf9f5" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="pinkGlow" cx="1" cy="0" r="0.85">
+      <stop offset="0" stop-color="#ffd2e6" stop-opacity="0.95" />
+      <stop offset="1" stop-color="#ffd2e6" stop-opacity="0" />
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="19" flood-color="#23263d" flood-opacity="0.22" />
+    </filter>
+    <clipPath id="screenClip">
+      <rect x="608" y="127" width="518" height="323" rx="12" />
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="#fbfeff" />
+  <rect width="1200" height="630" fill="url(#aquaGlow)" />
+  <rect width="1200" height="630" fill="url(#pinkGlow)" />
+
+  <g transform="translate(82 111)">
+    <image href="cabina-icon-64.png" width="68" height="68" />
+    <text x="88" y="48" fill="#171725" font-family="Quicksand, 'Zen Maru Gothic', sans-serif" font-size="43" font-weight="700" letter-spacing="-1.8">Cabina</text>
+  </g>
+
+  <text x="82" y="278" fill="#171725" font-family="'Zen Maru Gothic', sans-serif" font-size="47" font-weight="700" letter-spacing="-2.7">撮ったスクショが、</text>
+  <text x="82" y="343" fill="#171725" font-family="'Zen Maru Gothic', sans-serif" font-size="47" font-weight="700" letter-spacing="-2.7">開いた瞬間にすぐ並ぶ</text>
+  <text x="84" y="397" fill="#5b6679" font-family="'Zen Maru Gothic', sans-serif" font-size="19" font-weight="600">スクリーンショットを、待たずに使える場所へ。</text>
+
+  <g filter="url(#shadow)">
+    <rect x="608" y="127" width="518" height="323" rx="12" fill="#171725" />
+    <g clip-path="url(#screenClip)">
+      <image href="cabina-library-screen.png" x="608" y="127" width="518" height="323" preserveAspectRatio="xMidYMid slice" />
+    </g>
+    <rect x="608" y="127" width="518" height="323" rx="12" fill="none" stroke="#fff" stroke-opacity="0.25" />
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+/* ▼ [tokens] LP全体で共有する色・余白・フォントの定義 */
+:root {
+  --paper: #effbfc;
+  --cream: #fbfeff;
+  --surface: #ffffff;
+  --ink: #171725;
+  --muted: #5b6679;
+  --line: rgba(23, 23, 37, .14);
+  --navy: #171725;
+  --navy-soft: #2b2b45;
+  --teal: #14c9c9;
+  --teal-deep: #00aeb7;
+  --pink: #ff4fa3;
+  --pink-soft: #ffd6e7;
+  --orange: #ffb43b;
+  --violet: #a184ed;
+  --lilac-soft: #eee9ff;
+  --teal-soft: #d8f8f8;
+  --font-family: "Quicksand", "Zen Maru Gothic", sans-serif;
+}
+/* ▲ [tokens] */

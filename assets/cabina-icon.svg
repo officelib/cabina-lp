@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 64 64" role="img" aria-label="Cabina">
+<defs>
+<linearGradient id="cbPlate" x1="0" y1="0" x2="0.55" y2="1">
+<stop offset="0%" stop-color="#1A1A22"/><stop offset="100%" stop-color="#0C0C12"/></linearGradient>
+<filter id="cbGlow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="3.6"/></filter>
+</defs>
+<rect width="64" height="64" rx="14" fill="url(#cbPlate)"/>
+<g filter="url(#cbGlow)" opacity="0.75"><path d="M32 12 A20 20 0 1 1 12 32" fill="none" stroke="#FF4FA3" stroke-width="6.5" stroke-linecap="round"/><path d="M32 21 A11 11 0 1 0 43 32" fill="none" stroke="#FFB04D" stroke-width="5.5" stroke-linecap="round"/><circle cx="32" cy="32" r="4" fill="#3DDCC4"/></g>
+<path d="M32 12 A20 20 0 1 1 12 32" fill="none" stroke="#FF4FA3" stroke-width="6.5" stroke-linecap="round"/><path d="M32 21 A11 11 0 1 0 43 32" fill="none" stroke="#FFB04D" stroke-width="5.5" stroke-linecap="round"/><circle cx="32" cy="32" r="4" fill="#3DDCC4"/>
+</svg>

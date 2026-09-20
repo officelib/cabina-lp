@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/cabina-icon-64.png" />
+  <meta name="description" content="Cabina — スクリーンショットを、待たずに使える場所へ。" />
+  <link rel="canonical" href="https://cabinatrova.com/" />
+  <meta property="og:site_name" content="Cabina" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cabina | スクリーンショットを、待たずに使える場所へ。" />
+  <meta property="og:description" content="フォルダを追加するだけで、スクリーンショットや写真を手軽に素早く探せるWindowsアプリ。" />
+  <meta property="og:url" content="https://cabinatrova.com/" />
+  <meta property="og:image" content="https://cabinatrova.com/assets/ogp-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cabina | スクリーンショットを、待たずに使える場所へ。" />
+  <meta name="twitter:description" content="フォルダを追加するだけで、スクリーンショットや写真を手軽に素早く探せるWindowsアプリ。" />
+  <meta name="twitter:image" content="https://cabinatrova.com/assets/ogp-card.png" />
+  <title>Cabina | スクリーンショットを、待たずに使える場所へ。</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Zen+Maru+Gothic:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/app.css?v=card-glow-1" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LC9BH5H0R2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LC9BH5H0R2');
+  </script>
+  <script src="js/lp-reveal.js" defer></script>
+  <script src="js/device-notice.js" defer></script>
+</head>
+<body>
+  <!-- ▼ [header] 最小限の固定ナビゲーション -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="#top" aria-label="Cabina トップへ"><img class="brand-icon" src="assets/cabina-icon-64.png" alt="" width="28" height="28" />Cabina</a>
+      <nav aria-label="ページ内ナビゲーション"><a href="#top">ホーム</a><a href="#find">できること</a><a href="#faq">FAQ</a></nav>
+      <a class="header-cta" href="https://buy.stripe.com/3cIfZj8a344Ra0h1WE5gc01" hidden style="display: none;">今すぐ購入</a>
+    </div>
+  </header>
+  <!-- ▲ [header] -->
+
+  <aside class="device-notice" data-device-notice hidden aria-label="対応環境の案内">
+    <div class="device-notice-inner">
+      <p><strong>CabinaはWindows 10 / 11専用です。</strong><span data-device-notice-message>お使いのPCでこのページを開いてください。</span></p>
+      <button type="button" data-device-notice-copy>URLをコピー</button>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ▼ [hero] 速さを主役にしたファーストビュー -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">撮ったスクショが、<br />開いた瞬間にすぐ並ぶ</h1>
+          <p>Cabinaはフォルダをアプリに追加するだけで、<br>手軽に素早くスクリーンショットや写真を探せるアプリ<br>エクスプローラーを開く待ち時間はありません</p>
+          <div class="hero-actions"><a class="primary-button uiverse-glow-button" href="https://github.com/officelib/cabina-releases/releases/latest/download/Cabina-setup.exe">Windows版をダウンロード</a></div>
+        </div>
+
+        <figure class="hero-product hero-gallery" aria-label="Cabinaでできることの画面ギャラリー" data-hero-gallery>
+          <div class="hero-gallery-frame">
+            <div class="hero-gallery-stage">
+              <div class="hero-gallery-panel is-active" id="hero-gallery-list" role="group" aria-label="開いた瞬間に一覧表示">
+                <img class="hero-app-screen" src="assets/cabina-library-screen.png" alt="多数のスクリーンショットを一覧で表示するCabinaの画面" />
+              </div>
+              <div class="hero-gallery-panel hero-gallery-panel-watch" id="hero-gallery-watch" role="group" aria-label="撮った後も一緒に増える" hidden>
+                <img class="hero-watch-before" src="assets/timeline-watch-before-screen.png" alt="" />
+                <img class="hero-watch-after" src="assets/timeline-watch-after-screen.png" alt="新しいスクリーンショットが追加されたCabinaの画面" />
+                <span class="hero-watch-change" aria-hidden="true"></span>
+              </div>
+              <div class="hero-gallery-panel" id="hero-gallery-search" role="group" aria-label="写真から検索" hidden>
+                <img class="hero-app-screen" src="assets/hero-search-screen.png" alt="料理の写真を検索したCabinaの画面" />
+              </div>
+              <div class="hero-gallery-panel" id="hero-gallery-similar" role="group" aria-label="似ている写真を探す" hidden>
+                <img class="hero-app-screen" src="assets/hero-similar-screen.png" alt="似ている写真を表示したCabinaの画面" />
+              </div>
+              <div class="hero-gallery-panel hero-gallery-panel-crop" id="hero-gallery-crop" role="group" aria-label="写真をトリミングする" hidden>
+                <img class="hero-app-screen" src="assets/hero-crop-screen.png" alt="写真をトリミングするCabinaの画面" />
+                <span class="hero-crop-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+              </div>
+              <div class="hero-gallery-panel" id="hero-gallery-favorite" role="group" aria-label="お気に入りに追加する" hidden>
+                <img class="hero-app-screen" src="assets/hero-favorite-screen.png" alt="お気に入りへ追加した写真を表示するCabinaの画面" />
+              </div>
+              <div class="hero-gallery-panel" id="hero-gallery-menu" role="group" aria-label="メニューから操作する" hidden>
+                <img class="hero-app-screen" src="assets/hero-menu-screen.png" alt="メニューを開いたCabinaの画面" />
+              </div>
+              <div class="hero-gallery-panel" id="hero-gallery-fullscreen" role="group" aria-label="全画面で写真を表示する" hidden>
+                <img class="hero-app-screen" src="assets/hero-fullscreen-screen.png" alt="写真を全画面で拡大表示するCabinaの画面" />
+              </div>
+            </div>
+            <button class="hero-gallery-arrow previous" type="button" aria-label="前の機能を見る" data-hero-gallery-previous>&lt;</button>
+            <button class="hero-gallery-arrow next" type="button" aria-label="次の機能を見る" data-hero-gallery-next>&gt;</button>
+          </div>
+          <figcaption class="hero-gallery-controls">
+            <span class="hero-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中">
+              <i class="is-active" data-hero-gallery-dot></i><i data-hero-gallery-dot></i><i data-hero-gallery-dot></i><i data-hero-gallery-dot></i><i data-hero-gallery-dot></i><i data-hero-gallery-dot></i><i data-hero-gallery-dot></i><i data-hero-gallery-dot></i>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <!-- ▲ [hero] -->
+
+    <!-- ▼ [how-it-works] 初回と次回以降の違いを正直に伝える -->
+    <section class="how-it-works" id="how-it-works" aria-labelledby="how-title">
+      <div class="container split-heading">
+        <div><h2 id="how-title">最初に一度だけ<br />あとは待たない</h2></div>
+        <p>Cabinaは、追加したフォルダをライブラリとして準備し、毎回フォルダを読み直しません</p>
+      </div>
+      <div class="container timeline">
+        <article class="timeline-card first">
+          <h3>フォルダから<br />ライブラリを作る</h3>
+          <p>写真数や保存先をCabinaに追加します。ここだけ準備に時間がかかります</p>
+          <div class="timeline-visual setup-visual" aria-hidden="true">
+            <div class="setup-folder"><i></i></div>
+            <div class="setup-library"><img src="assets/timeline-setup-empty-screen.png" alt="" /></div>
+          </div>
+        </article>
+        <article class="timeline-card ready">
+          <h3>開いた瞬間<br />すぐに一覧表示</h3>
+          <p>一度作ったライブラリを使うので、待たずに見返せます</p>
+          <figure class="timeline-visual instant-library">
+            <img class="instant-library-empty" src="assets/timeline-setup-empty-screen.png" alt="" />
+            <img class="instant-library-ready" src="assets/timeline-ready-screen.png" alt="Cabinaで写真が一覧表示された画面" />
+          </figure>
+        </article>
+        <article class="timeline-card watch">
+          <h3>撮った後も<br />一緒に増える</h3>
+          <p>登録したフォルダを見守り、新しい一枚をライブラリへ加えます。</p>
+          <figure class="timeline-visual watch-screen">
+            <img class="watch-screen-before" src="assets/timeline-watch-before-screen.png" alt="" />
+            <img class="watch-screen-after" src="assets/timeline-watch-after-screen.png" alt="" />
+            <span class="watch-change" aria-hidden="true"></span>
+          </figure>
+        </article>
+      </div>
+    </section>
+    <!-- ▲ [how-it-works] -->
+
+    <!-- ▼ [find] 「探す」「使う」を少ないカードで見せる -->
+    <section class="find" id="find" aria-labelledby="find-title"><div class="container split-heading light"><div><h2 id="find-title">速く開けて<br />速く見つける</h2></div><p>Cabinaの目標は、スクショをためることではありません。見つけて、すぐ使う。そのための道筋を短くすることです。</p></div><div class="container feature-grid"><article class="feature-card search-feature"><div><h3>言葉で探す</h3><p>日付やファイル名を覚えていなくても、「料理」などの単語から探せます</p></div><figure class="search-demo" aria-label="料理という言葉で写真を検索するアニメーション"><img class="search-demo-before" src="assets/search-demo-before.png" alt="" /><img class="search-demo-after" src="assets/search-demo-after.png" alt="料理を検索したCabinaの画面" /><span class="search-demo-query" aria-hidden="true"><small>料</small><small>理</small><em></em></span></figure></article><article class="feature-card similar-feature"><div><h3>一枚から似た写真をたどる</h3><p>近い雰囲気の写真を手がかりに、埋もれてた写真を探せます</p></div><figure class="similar-demo" aria-label="写真をクリックして似ている写真を表示するアニメーション"><img class="similar-demo-before" src="assets/timeline-watch-before-screen.png" alt="" /><img class="similar-demo-after" src="assets/hero-similar-screen.png" alt="似ている写真を表示するCabinaの画面" /><span class="similar-demo-click" aria-hidden="true"></span></figure></article><article class="feature-card favorite-feature"><div><h3>お気に入りの写真をまとめる</h3><p>また使いたい一枚は、星を付けてまとめておけます</p></div><figure class="favorite-demo" aria-label="写真をお気に入りに追加し、一覧から見つけるアニメーション"><img class="favorite-demo-before" src="assets/favorite-demo-before.png" alt="" /><img class="favorite-demo-added" src="assets/favorite-demo-added.png" alt="写真をお気に入りに追加したCabinaの画面" /><img class="favorite-demo-list" src="assets/favorite-demo-list.png" alt="お気に入り一覧を表示したCabinaの画面" /></figure></article></div></section>
+    <!-- ▲ [find] -->
+
+    <!-- ▼ [edit-and-save] 編集とコピー保存を3カードで見せる -->
+    <section class="edit-save" id="edit-save" aria-labelledby="edit-save-title">
+      <div class="container split-heading light">
+        <div><h2 id="edit-save-title">ちょっとうれしい<br />カンタン編集</h2></div>
+        <p>回転、切り抜き、彩度/明るさ調整。写真の編集を楽しみたい人は専用のアプリを使っている人が多いです。その前にCabinaで写真編集の土台づくり。元の写真はそのまま。コピーを作ってくれます。</p>
+      </div>
+      <div class="container edit-save-grid">
+        <article class="edit-save-card crop-card">
+          <div><h3>向きを変える、切り抜く</h3><p>残したい範囲を選んで、すぐに新しいコピーを作れます</p></div>
+          <figure class="crop-mock" aria-label="写真の切り抜き範囲を選ぶアニメーション"><img src="assets/hero-crop-screen.png" alt="トリミング中のCabinaの画面" /><span class="crop-frame" aria-hidden="true"><i></i><b></b><em></em><strong></strong></span></figure>
+        </article>
+        <article class="edit-save-card rotate-card">
+          <div><h3>明るさ・彩度を調整する</h3><p>本格的な編集の前にちょっと調整</p></div>
+          <figure class="brightness-demo" aria-label="明るさを調整するアニメーション"><img class="brightness-demo-before" src="assets/brightness-demo-before.png" alt="" /><img class="brightness-demo-after" src="assets/brightness-demo-after.png" alt="明るさを上げたCabinaの画面" /><span class="brightness-slider" aria-hidden="true"></span></figure>
+        </article>
+        <article class="edit-save-card copy-card">
+          <div><h3>元の写真は、そのまま</h3><p>編集した写真は別のコピーとして保存。撮った一枚を傷つけません</p></div>
+          <figure class="copy-demo" aria-label="編集前の写真から、編集したコピーを保存するアニメーション"><img class="copy-demo-before" src="assets/copy-demo-before.png" alt="編集前のCabina画面" /><img class="copy-demo-after" src="assets/copy-demo-after.png" alt="編集したコピーが一覧に追加されたCabina画面" /><span class="copy-demo-highlight" aria-hidden="true"></span></figure>
+        </article>
+      </div>
+    </section>
+    <!-- ▲ [edit-and-save] -->
+
+    <!-- ▼ [voice] 実機テストの声を置く -->
+    <section class="voice" aria-labelledby="voice-title"><div class="container voice-gallery" data-voice-gallery><button class="voice-gallery-arrow" type="button" aria-label="前の声を表示" data-voice-gallery-previous hidden>&lt;</button><div class="voice-gallery-viewport"><article class="voice-card voice-gallery-slide is-active" data-voice-gallery-slide><h2 id="voice-title">「見やすいし、速い。」</h2><blockquote><span class="voice-line">Windowsのフォルダは、</span><span class="voice-line">開いてから少し待つことがある。</span><span class="voice-line">Cabinaはすぐ表示してくれるから</span><span class="voice-line">嬉しい。</span></blockquote><p>ゲームでスクリーンショットを日常的に撮影・投稿するNさんの声</p></article><article class="voice-card voice-gallery-slide" data-voice-gallery-slide hidden><h2 id="voice-title-2">「フォト、フォルダと2回開かなくてもいい」</h2><blockquote><span class="voice-line">今までは、フォルダを開いて、</span><span class="voice-line">探して、フォトを開いていた。</span><span class="voice-line">Cabinaなら、Cabinaを開いて探すだけ。</span><span class="voice-line">すごく手間が省けた。</span></blockquote><p>写真をPCでバックアップしているK.Mさんの声</p></article><article class="voice-card voice-gallery-slide" data-voice-gallery-slide hidden><h2 id="voice-title-3">「昔撮ったスクショが偶然見つかった」</h2><blockquote><span class="voice-line">1枚写真を選んだら、</span><span class="voice-line">昔撮ったスクショが</span><span class="voice-line">「似ている写真」に表示された。</span><span class="voice-line">気になって探していたから、すごく便利だった。</span></blockquote><p>ゲームでスクリーンショットを日常的に撮影するAさんの声</p></article></div><button class="voice-gallery-arrow" type="button" aria-label="次の声を表示" data-voice-gallery-next hidden>&gt;</button></div></section>
+    <!-- ▲ [voice] -->
+
+    <!-- ▼ [faq] 購入前の最低限の疑問だけに答える -->
+    <section class="faq" id="faq" aria-labelledby="faq-title"><div class="container faq-layout"><div><h2 id="faq-title">Cabinaをもっと、<br />知ってください。</h2></div><div class="faq-list"><details><summary>料金はいくらですか？</summary><p>現在機能拡張のため準備しております。30日間すべての機能を無料でお試しできます。</p></details><details><summary>アカウント登録は必要ですか？</summary><p>必要ありません。Cabinaはオフラインで動かせるアプリです。アプリをダウンロードする時だけはインターネット環境が必要ですが、それ以外は完全オフラインで動作します。</p></details><details><summary>元のスクリーンショットは移動されますか？</summary><p>いいえ。Cabinaは元のファイルを移動・コピーせず、追加したフォルダをライブラリとして扱います。</p></details><details><summary>初回の取り込みには時間がかかりますか？</summary><p>Cabinaはスクリーンショットをすぐ使える一覧にするWindowsアプリです。最初に一度だけ取り込み、フォルダ内の写真数に応じてライブラリ作成の時間がかかります。次からは、開いた瞬間に一覧を表示します。</p></details><details><summary>対応環境は何ですか？</summary><p>Windows 10 / 11（64bit）に対応しています。Mac・スマートフォンには対応していません。<br />CPU: 64bit のプロセッサ（4コア以上を推奨）<br />メモリ: 8GB 以上<br />空き容量: 1GB 以上<br />ダウンロード: 約343MB（zip形式）<br />動作にインターネット接続は必要ありません。</p></details><details><summary>複数のフォルダを登録できますか？</summary><p>できます。ゲームごと・用途ごとなど、複数の保存先をまとめて扱えます。</p></details><details><summary>写真はどこかに送られますか？</summary><p>いいえ。Cabinaはインターネットに接続しません。写真を見分ける仕組み（AIモデル）もアプリの中に入っているため、写真が外に出ることはありません。アカウント登録も不要です。</p></details><details><summary>どうやって写真の中身が分かるのですか？</summary><p>Googleが公開している画像認識モデル「SigLIP2」をアプリに組み込んでいます。写真に何が写っているかを数値に置き換え、言葉との近さで探します。ファイル名やフォルダ名は使いません。</p></details><details><summary>なぜアプリのサイズが大きいのですか？</summary><p>写真を見分けるモデル本体（約350MB）をアプリに同梱しているためです。外部のサーバーへ送らず、お手元で処理するための構成です。</p></details><details><summary>専用のグラフィックボードは必要ですか？</summary><p>必要ありません。CPUだけで動きます。開発時は6コアのノート用CPU（専用グラフィックなし）で動作を確認しています。</p></details><details><summary>機械学習とは何ですか？</summary><p>たくさんの「写真」と「その説明文」の組み合わせを見せて、写真に何が写っているかを見分けられるようにした仕組みです。「猫」という言葉と、猫が写った写真が近いものだと分かるようになるため、ファイル名に「猫」と入っていなくても探せます。<br />Cabinaは学習を済ませたものを組み込んで使っており、お客様の写真で学習することはありません。</p></details><details><summary>撮影日が「日付不明」になるのはなぜですか？</summary><p>撮影日時は、写真のファイルに記録された情報から読み取っています。スマートフォンやデジタルカメラで撮った写真には撮影日時が記録されていますが、スクリーンショットには記録されないことが多く、その場合は「日付不明」にまとまります。画像を加工・編集すると記録が失われることもあります。<br />日付が分からないものも、写っているもので探したり、フォルダからたどったりできます。</p></details></div></div></section>
+    <!-- ▲ [faq] -->
+
+    <!-- ▼ [purchase] 購入先URL確定後に href を置き換える -->
+    <section class="purchase" id="purchase" aria-labelledby="purchase-title"><div class="container purchase-card"><img class="purchase-icon" src="assets/cabina-icon.svg" alt="" width="112" height="112" /><div class="purchase-copy"><h2 id="purchase-title">Cabinaはサブスクリプション不要です。</h2><p>アプリインストールは無料体験版です。<br />30日間すべての機能を体験できます。</p><a class="primary-button uiverse-glow-button" href="https://github.com/officelib/cabina-releases/releases/latest/download/Cabina-setup.exe">Windows版をダウンロード</a><nav class="purchase-legal-links" aria-label="法務情報"><a href="tokushoho.html">特定商取引法に基づく表記</a><a href="terms.html">利用規約</a><a href="privacy.html">プライバシーポリシー</a></nav></div></div></section>
+    <!-- ▲ [purchase] -->
+  </main>
+</body>
+</html>
