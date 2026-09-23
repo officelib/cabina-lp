@@ -69,13 +69,16 @@
               <div class="hero-gallery-panel is-active" id="hero-gallery-text" role="group" aria-label="文字を入れて投稿用に仕上げる">
                 <img class="hero-app-screen" src="assets/hero-text-overlay-screen.png" alt="写真に文字を入れて仕上げるCabinaの画面" />
               </div>
+              <div class="hero-gallery-panel" id="hero-gallery-select" role="group" aria-label="素材から使いたい一枚を選ぶ" hidden>
+                <img class="hero-app-screen" src="assets/hero-select-screen.png" alt="多数の画像から使いたい一枚を選ぶCabinaの画面" />
+              </div>
             </div>
-            <button class="hero-gallery-arrow previous" type="button" aria-label="前の機能を見る" data-hero-gallery-previous hidden>&lt;</button>
-            <button class="hero-gallery-arrow next" type="button" aria-label="次の機能を見る" data-hero-gallery-next hidden>&gt;</button>
+            <button class="hero-gallery-arrow previous" type="button" aria-label="前の機能を見る" data-hero-gallery-previous>&lt;</button>
+            <button class="hero-gallery-arrow next" type="button" aria-label="次の機能を見る" data-hero-gallery-next>&gt;</button>
           </div>
-          <figcaption class="hero-gallery-controls" hidden>
+          <figcaption class="hero-gallery-controls">
             <span class="hero-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中">
-              <i class="is-active" data-hero-gallery-dot></i>
+              <i class="is-active" data-hero-gallery-dot></i><i data-hero-gallery-dot></i>
             </span>
           </figcaption>
         </figure>
