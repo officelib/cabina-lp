@@ -129,7 +129,7 @@
 })();
 /* ▲ [hero-gallery] */
 
-/* ▼ [card-gallery] 説明カード内の実写をホバーで切り替える */
+/* ▼ [card-gallery] 説明カード内の実写を手動で切り替える */
 (() => {
   "use strict";
 
@@ -141,7 +141,6 @@
     const pagination = gallery.querySelector(".card-gallery-pagination");
     let activeIndex = 0;
     let hideTimer;
-    let autoTimer;
 
     const showPanel = (index, immediately = false) => {
       const nextIndex = (index + panels.length) % panels.length;
@@ -175,31 +174,8 @@
       pagination.setAttribute("aria-label", `${activeIndex + 1}枚目を表示中`);
     };
 
-    const stopAuto = () => clearTimeout(autoTimer);
-    const startAuto = () => {
-      if (!window.matchMedia("(hover: hover)").matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-      stopAuto();
-      autoTimer = setTimeout(function rotate() {
-        showPanel(activeIndex + 1);
-        autoTimer = setTimeout(rotate, 2600);
-      }, 1200);
-    };
-
-    previous.addEventListener("click", () => {
-      stopAuto();
-      showPanel(activeIndex - 1);
-      startAuto();
-    });
-    next.addEventListener("click", () => {
-      stopAuto();
-      showPanel(activeIndex + 1);
-      startAuto();
-    });
-    gallery.addEventListener("mouseenter", startAuto);
-    gallery.addEventListener("mouseleave", () => {
-      stopAuto();
-      showPanel(0);
-    });
+    previous.addEventListener("click", () => showPanel(activeIndex - 1));
+    next.addEventListener("click", () => showPanel(activeIndex + 1));
     showPanel(0, true);
   });
 })();
