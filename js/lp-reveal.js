@@ -128,3 +128,33 @@
   next.addEventListener("click", () => showPanel(activeIndex + 1));
 })();
 /* ▲ [hero-gallery] */
+
+/* ▼ [card-gallery] 説明カード内の実写を手動で切り替える */
+(() => {
+  "use strict";
+
+  document.querySelectorAll("[data-card-gallery]").forEach((gallery) => {
+    const panels = [...gallery.querySelectorAll(".card-gallery-panel")];
+    const previous = gallery.querySelector("[data-card-gallery-previous]");
+    const next = gallery.querySelector("[data-card-gallery-next]");
+    const dots = [...gallery.querySelectorAll("[data-card-gallery-dot]")];
+    const pagination = gallery.querySelector(".card-gallery-pagination");
+    let activeIndex = 0;
+
+    const showPanel = (index) => {
+      activeIndex = (index + panels.length) % panels.length;
+      panels.forEach((panel, panelIndex) => {
+        const isActive = panelIndex === activeIndex;
+        panel.classList.toggle("is-active", isActive);
+        panel.hidden = !isActive;
+      });
+      dots.forEach((dot, dotIndex) => dot.classList.toggle("is-active", dotIndex === activeIndex));
+      pagination.setAttribute("aria-label", `${activeIndex + 1}枚目を表示中`);
+    };
+
+    previous.addEventListener("click", () => showPanel(activeIndex - 1));
+    next.addEventListener("click", () => showPanel(activeIndex + 1));
+    showPanel(0);
+  });
+})();
+/* ▲ [card-gallery] */
