@@ -200,3 +200,6 @@ main > .hero,main > .problem,main > .how-it-works,main > .find,main > .edit-save
 }
 @keyframes card-border-glow { 0%,100% { box-shadow: 0 0 0 2px rgba(20,201,201,.15),0 0 14px rgba(20,201,201,.2); } 50% { box-shadow: 0 0 0 3px rgba(20,201,201,.32),0 0 30px rgba(20,201,201,.52); } }
 /* ▲ [interactive-card-border] */
+
+/* Hero supplemental copy to download CTA spacing */
+.hero-copy > p { margin-bottom: 50px; }
