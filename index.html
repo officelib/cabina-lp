@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Zen+Maru+Gothic:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/app.css?v=card-gallery-12" />
+  <link rel="stylesheet" href="css/app.css?v=card-gallery-13" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LC9BH5H0R2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -32,7 +32,7 @@
     gtag('js', new Date());
     gtag('config', 'G-LC9BH5H0R2');
   </script>
-  <script src="js/lp-reveal.js?v=card-gallery-3" defer></script>
+  <script src="js/lp-reveal.js?v=card-gallery-4" defer></script>
   <script src="js/device-notice.js" defer></script>
 </head>
 <body>
@@ -209,8 +209,15 @@
           </figure>
         </article>
         <article class="edit-save-card copy-card">
-          <div><h3>元の写真は、そのまま</h3><p>編集した写真は別のコピーとして保存。撮った一枚を傷つけません</p></div>
-          <figure class="copy-demo" aria-label="編集前の写真から、編集したコピーを保存するアニメーション"><img class="copy-demo-before" src="assets/copy-demo-before.png" alt="編集前のCabina画面" /><img class="copy-demo-after" src="assets/copy-demo-after.png" alt="編集したコピーが一覧に追加されたCabina画面" /><span class="copy-demo-highlight" aria-hidden="true"></span></figure>
+          <div><h3>写真を、ZIPにまとめる。</h3><p>送りたい写真をまとめて選んで、<br />ひとつのZIPとして保存できます。</p></div>
+          <figure class="copy-demo card-gallery" aria-label="選んだ写真をZIPにまとめて保存する画面" data-card-gallery>
+            <div class="card-gallery-stage">
+              <div class="card-gallery-panel is-active" role="group" aria-label="選んだ写真をZIPにまとめて保存する"><img src="assets/card-export-zip-select.png" alt="選んだ写真をZIPにまとめて保存するCabinaの画面" /></div>
+            </div>
+            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous hidden>&lt;</button>
+            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next hidden>&gt;</button>
+            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中"><i class="is-active" data-card-gallery-dot></i></figcaption>
+          </figure>
         </article>
       </div>
     </section>

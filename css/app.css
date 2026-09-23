@@ -221,3 +221,4 @@ main > .hero,main > .problem,main > .how-it-works,main > .find,main > .edit-save
 .crop-card .crop-mock.card-gallery .card-gallery-panel img { object-fit: contain; }
 .rotate-card .brightness-demo.card-gallery { background: #171522; }
 .rotate-card .brightness-demo.card-gallery .card-gallery-panel img { object-fit: contain; }
+.card-gallery-arrow[hidden],.card-gallery-lightbox-arrow[hidden] { display: none; }

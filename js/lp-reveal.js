@@ -149,6 +149,10 @@
     lightboxImage.src = image.currentSrc || image.src;
     lightboxImage.alt = image.alt;
     lightboxCount.textContent = `${index + 1} / ${expandedGallery.panels.length}`;
+    const hasMultiplePanels = expandedGallery.panels.length > 1;
+    if (lightboxPrevious) lightboxPrevious.hidden = !hasMultiplePanels;
+    if (lightboxNext) lightboxNext.hidden = !hasMultiplePanels;
+    lightboxCount.hidden = !hasMultiplePanels;
   };
 
   lightboxPrevious?.addEventListener("click", () => expandedGallery?.showPanel(expandedGallery.getActiveIndex() - 1));
