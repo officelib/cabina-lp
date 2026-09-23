@@ -133,8 +133,37 @@
 (() => {
   "use strict";
 
+  const lightbox = document.querySelector("[data-card-gallery-lightbox]");
+  const lightboxImage = lightbox?.querySelector("[data-card-gallery-lightbox-image]");
+  const lightboxCount = lightbox?.querySelector("[data-card-gallery-lightbox-count]");
+  const lightboxPrevious = lightbox?.querySelector("[data-card-gallery-lightbox-previous]");
+  const lightboxNext = lightbox?.querySelector("[data-card-gallery-lightbox-next]");
+  const lightboxClose = lightbox?.querySelector("[data-card-gallery-lightbox-close]");
+  let expandedGallery;
+
+  const updateLightbox = () => {
+    if (!expandedGallery || !lightboxImage || !lightboxCount) return;
+
+    const index = expandedGallery.getActiveIndex();
+    const image = expandedGallery.panels[index].querySelector("img");
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt;
+    lightboxCount.textContent = `${index + 1} / ${expandedGallery.panels.length}`;
+  };
+
+  lightboxPrevious?.addEventListener("click", () => expandedGallery?.showPanel(expandedGallery.getActiveIndex() - 1));
+  lightboxNext?.addEventListener("click", () => expandedGallery?.showPanel(expandedGallery.getActiveIndex() + 1));
+  lightboxClose?.addEventListener("click", () => lightbox.close());
+  lightbox?.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
+  lightbox?.addEventListener("close", () => {
+    expandedGallery = undefined;
+  });
+
   document.querySelectorAll("[data-card-gallery]").forEach((gallery) => {
     const panels = [...gallery.querySelectorAll(".card-gallery-panel")];
+    const stage = gallery.querySelector(".card-gallery-stage");
     const previous = gallery.querySelector("[data-card-gallery-previous]");
     const next = gallery.querySelector("[data-card-gallery-next]");
     const dots = [...gallery.querySelectorAll("[data-card-gallery-dot]")];
@@ -172,10 +201,28 @@
       activeIndex = nextIndex;
       dots.forEach((dot, dotIndex) => dot.classList.toggle("is-active", dotIndex === activeIndex));
       pagination.setAttribute("aria-label", `${activeIndex + 1}枚目を表示中`);
+      updateLightbox();
+    };
+
+    const openLightbox = () => {
+      if (!lightbox || !stage) return;
+      expandedGallery = { panels, showPanel, getActiveIndex: () => activeIndex };
+      updateLightbox();
+      lightbox.showModal();
     };
 
     previous.addEventListener("click", () => showPanel(activeIndex - 1));
     next.addEventListener("click", () => showPanel(activeIndex + 1));
+    stage.tabIndex = 0;
+    stage.setAttribute("role", "button");
+    stage.setAttribute("aria-label", "画像を拡大して見る");
+    stage.addEventListener("click", openLightbox);
+    stage.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openLightbox();
+      }
+    });
     showPanel(0, true);
   });
 })();

@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Zen+Maru+Gothic:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/app.css?v=card-gallery-2" />
+  <link rel="stylesheet" href="css/app.css?v=card-gallery-3" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LC9BH5H0R2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -32,7 +32,7 @@
     gtag('js', new Date());
     gtag('config', 'G-LC9BH5H0R2');
   </script>
-  <script src="js/lp-reveal.js?v=card-gallery-2" defer></script>
+  <script src="js/lp-reveal.js?v=card-gallery-3" defer></script>
   <script src="js/device-notice.js" defer></script>
 </head>
 <body>
@@ -181,5 +181,14 @@
     <section class="purchase" id="purchase" aria-labelledby="purchase-title"><div class="container purchase-card"><img class="purchase-icon" src="assets/cabina-icon.svg" alt="" width="112" height="112" /><div class="purchase-copy"><h2 id="purchase-title">Cabinaはサブスクリプション不要です。</h2><p>アプリインストールは無料体験版です。<br />30日間すべての機能を体験できます。</p><a class="primary-button uiverse-glow-button" href="https://github.com/officelib/cabina-releases/releases/latest/download/Cabina-setup.zip">Windows版をダウンロード</a><nav class="purchase-legal-links" aria-label="法務情報"><a href="tokushoho.html">特定商取引法に基づく表記</a><a href="terms.html">利用規約</a><a href="privacy.html">プライバシーポリシー</a></nav></div></div></section>
     <!-- ▲ [purchase] -->
   </main>
+  <dialog class="card-gallery-lightbox" data-card-gallery-lightbox aria-label="説明カードの画像を拡大表示">
+    <div class="card-gallery-lightbox-content">
+      <button class="card-gallery-lightbox-close" type="button" aria-label="拡大表示を閉じる" data-card-gallery-lightbox-close>&times;</button>
+      <img data-card-gallery-lightbox-image src="" alt="" />
+      <button class="card-gallery-lightbox-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-lightbox-previous>&lt;</button>
+      <button class="card-gallery-lightbox-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-lightbox-next>&gt;</button>
+      <p class="card-gallery-lightbox-count" aria-live="polite" data-card-gallery-lightbox-count></p>
+    </div>
+  </dialog>
 </body>
 </html>
