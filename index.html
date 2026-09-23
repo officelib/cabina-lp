@@ -66,40 +66,16 @@
         <figure class="hero-product hero-gallery" aria-label="Cabinaでできることの画面ギャラリー" data-hero-gallery>
           <div class="hero-gallery-frame">
             <div class="hero-gallery-stage">
-              <div class="hero-gallery-panel is-active" id="hero-gallery-list" role="group" aria-label="開いた瞬間に一覧表示">
-                <img class="hero-app-screen" src="assets/cabina-library-screen.png" alt="多数のスクリーンショットを一覧で表示するCabinaの画面" />
-              </div>
-              <div class="hero-gallery-panel hero-gallery-panel-watch" id="hero-gallery-watch" role="group" aria-label="撮った後も一緒に増える" hidden>
-                <img class="hero-watch-before" src="assets/timeline-watch-before-screen.png" alt="" />
-                <img class="hero-watch-after" src="assets/timeline-watch-after-screen.png" alt="新しいスクリーンショットが追加されたCabinaの画面" />
-                <span class="hero-watch-change" aria-hidden="true"></span>
-              </div>
-              <div class="hero-gallery-panel" id="hero-gallery-search" role="group" aria-label="写真から検索" hidden>
-                <img class="hero-app-screen" src="assets/hero-search-screen.png" alt="料理の写真を検索したCabinaの画面" />
-              </div>
-              <div class="hero-gallery-panel" id="hero-gallery-similar" role="group" aria-label="似ている写真を探す" hidden>
-                <img class="hero-app-screen" src="assets/hero-similar-screen.png" alt="似ている写真を表示したCabinaの画面" />
-              </div>
-              <div class="hero-gallery-panel hero-gallery-panel-crop" id="hero-gallery-crop" role="group" aria-label="写真をトリミングする" hidden>
-                <img class="hero-app-screen" src="assets/hero-crop-screen.png" alt="写真をトリミングするCabinaの画面" />
-                <span class="hero-crop-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-              </div>
-              <div class="hero-gallery-panel" id="hero-gallery-favorite" role="group" aria-label="お気に入りに追加する" hidden>
-                <img class="hero-app-screen" src="assets/hero-favorite-screen.png" alt="お気に入りへ追加した写真を表示するCabinaの画面" />
-              </div>
-              <div class="hero-gallery-panel" id="hero-gallery-menu" role="group" aria-label="メニューから操作する" hidden>
-                <img class="hero-app-screen" src="assets/hero-menu-screen.png" alt="メニューを開いたCabinaの画面" />
-              </div>
-              <div class="hero-gallery-panel" id="hero-gallery-fullscreen" role="group" aria-label="全画面で写真を表示する" hidden>
-                <img class="hero-app-screen" src="assets/hero-fullscreen-screen.png" alt="写真を全画面で拡大表示するCabinaの画面" />
+              <div class="hero-gallery-panel is-active" id="hero-gallery-text" role="group" aria-label="文字を入れて投稿用に仕上げる">
+                <img class="hero-app-screen" src="assets/hero-text-overlay-screen.png" alt="写真に文字を入れて仕上げるCabinaの画面" />
               </div>
             </div>
-            <button class="hero-gallery-arrow previous" type="button" aria-label="前の機能を見る" data-hero-gallery-previous>&lt;</button>
-            <button class="hero-gallery-arrow next" type="button" aria-label="次の機能を見る" data-hero-gallery-next>&gt;</button>
+            <button class="hero-gallery-arrow previous" type="button" aria-label="前の機能を見る" data-hero-gallery-previous hidden>&lt;</button>
+            <button class="hero-gallery-arrow next" type="button" aria-label="次の機能を見る" data-hero-gallery-next hidden>&gt;</button>
           </div>
-          <figcaption class="hero-gallery-controls">
+          <figcaption class="hero-gallery-controls" hidden>
             <span class="hero-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中">
-              <i class="is-active" data-hero-gallery-dot></i><i data-hero-gallery-dot></i><i data-hero-gallery-dot></i><i data-hero-gallery-dot></i><i data-hero-gallery-dot></i><i data-hero-gallery-dot></i><i data-hero-gallery-dot></i><i data-hero-gallery-dot></i>
+              <i class="is-active" data-hero-gallery-dot></i>
             </span>
           </figcaption>
         </figure>
