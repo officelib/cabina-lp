@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Zen+Maru+Gothic:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/app.css?v=card-gallery-11" />
+  <link rel="stylesheet" href="css/app.css?v=card-gallery-12" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LC9BH5H0R2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -197,8 +197,16 @@
           </figure>
         </article>
         <article class="edit-save-card rotate-card">
-          <div><h3>明るさ・彩度を調整する</h3><p>本格的な編集の前にちょっと調整</p></div>
-          <figure class="brightness-demo" aria-label="明るさを調整するアニメーション"><img class="brightness-demo-before" src="assets/brightness-demo-before.png" alt="" /><img class="brightness-demo-after" src="assets/brightness-demo-after.png" alt="明るさを上げたCabinaの画面" /><span class="brightness-slider" aria-hidden="true"></span></figure>
+          <div><h3>写真を、GIFにする。</h3><p>選んだ写真をひとつのGIFにまとめて、<br />そのまま保存できます。</p></div>
+          <figure class="brightness-demo card-gallery" aria-label="選んだ写真をGIFとして保存する手順" data-card-gallery>
+            <div class="card-gallery-stage">
+              <div class="card-gallery-panel is-active" role="group" aria-label="GIFにする写真を選ぶ"><img src="assets/card-export-gif-frames.png" alt="GIFにまとめる写真を選ぶCabinaの画面" /></div>
+              <div class="card-gallery-panel" role="group" aria-label="GIFの設定をして保存する" hidden><img src="assets/card-export-gif-settings.png" alt="GIFの間隔や大きさを設定して保存するCabinaの画面" /></div>
+            </div>
+            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous>&lt;</button>
+            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next>&gt;</button>
+            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中"><i class="is-active" data-card-gallery-dot></i><i data-card-gallery-dot></i></figcaption>
+          </figure>
         </article>
         <article class="edit-save-card copy-card">
           <div><h3>元の写真は、そのまま</h3><p>編集した写真は別のコピーとして保存。撮った一枚を傷つけません</p></div>

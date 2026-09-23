@@ -219,3 +219,5 @@ main > .hero,main > .problem,main > .how-it-works,main > .find,main > .edit-save
 /* セクション3のサイズ選択カードも、実機画面を余白なく見せる */
 .crop-card .crop-mock.card-gallery { position: relative; background: #171522; }
 .crop-card .crop-mock.card-gallery .card-gallery-panel img { object-fit: contain; }
+.rotate-card .brightness-demo.card-gallery { background: #171522; }
+.rotate-card .brightness-demo.card-gallery .card-gallery-panel img { object-fit: contain; }
