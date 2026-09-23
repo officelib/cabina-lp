@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Zen+Maru+Gothic:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/app.css?v=card-gallery-4" />
+  <link rel="stylesheet" href="css/app.css?v=card-gallery-5" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LC9BH5H0R2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -124,9 +124,26 @@
         <article class="timeline-card ready">
           <h3>選んだ写真を、<br />まとめて整える。</h3>
           <p>明るさや彩度を、選んだ写真にまとめて反映。<br />文字やロゴを入れて、仕上げることができます。</p>
-          <figure class="timeline-visual instant-library">
-            <img class="instant-library-empty" src="assets/timeline-setup-empty-screen.png" alt="" />
-            <img class="instant-library-ready" src="assets/timeline-ready-screen.png" alt="Cabinaで写真が一覧表示された画面" />
+          <figure class="timeline-visual card-gallery" aria-label="一枚または複数枚の写真を整える手順" data-card-gallery>
+            <div class="card-gallery-stage">
+              <div class="card-gallery-panel is-active" role="group" aria-label="一枚の写真を調整する">
+                <img src="assets/card-edit-single.png" alt="一枚の写真の明るさや露出を調整するCabinaの画面" />
+              </div>
+              <div class="card-gallery-panel" role="group" aria-label="複数の写真を選ぶ" hidden>
+                <img src="assets/card-edit-multiple-select.png" alt="複数の写真を選択して編集するCabinaの画面" />
+              </div>
+              <div class="card-gallery-panel" role="group" aria-label="選んだ写真を見比べる" hidden>
+                <img src="assets/card-edit-selection-review.png" alt="選んだ複数の写真を見比べるCabinaの画面" />
+              </div>
+              <div class="card-gallery-panel" role="group" aria-label="文字をすべての画像へ適用する" hidden>
+                <img src="assets/card-edit-text-apply-all.png" alt="文字を複数の画像へ適用するCabinaの画面" />
+              </div>
+            </div>
+            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous>&lt;</button>
+            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next>&gt;</button>
+            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中">
+              <i class="is-active" data-card-gallery-dot></i><i data-card-gallery-dot></i><i data-card-gallery-dot></i><i data-card-gallery-dot></i>
+            </figcaption>
           </figure>
         </article>
         <article class="timeline-card watch">
