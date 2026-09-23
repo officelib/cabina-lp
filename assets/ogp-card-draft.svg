@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
-  <title id="title">Cabina — スクリーンショットを、待たずに使える場所へ。</title>
-  <desc id="description">Cabinaの実アイコンと実際のアプリ画面を使ったSNS共有カード</desc>
+  <title id="title">Cabina — 写真・スクショを、選んで、整えて、出す。</title>
+  <desc id="description">Cabinaの実アイコンと実際のアプリ画面を使った共有カード</desc>
   <defs>
     <radialGradient id="aquaGlow" cx="0" cy="1" r="0.9">
       <stop offset="0" stop-color="#bdf9f5" stop-opacity="0.95" />
@@ -27,14 +27,15 @@
     <text x="88" y="48" fill="#171725" font-family="Quicksand, 'Zen Maru Gothic', sans-serif" font-size="43" font-weight="700" letter-spacing="-1.8">Cabina</text>
   </g>
 
-  <text x="82" y="278" fill="#171725" font-family="'Zen Maru Gothic', sans-serif" font-size="47" font-weight="700" letter-spacing="-2.7">撮ったスクショが、</text>
-  <text x="82" y="343" fill="#171725" font-family="'Zen Maru Gothic', sans-serif" font-size="47" font-weight="700" letter-spacing="-2.7">開いた瞬間にすぐ並ぶ</text>
-  <text x="84" y="397" fill="#5b6679" font-family="'Zen Maru Gothic', sans-serif" font-size="19" font-weight="600">スクリーンショットを、待たずに使える場所へ。</text>
+  <text x="82" y="278" fill="#171725" font-family="'Zen Maru Gothic', sans-serif" font-size="45" font-weight="700" letter-spacing="-2.7">無数の画像・写真から、</text>
+  <text x="82" y="343" fill="#171725" font-family="'Zen Maru Gothic', sans-serif" font-size="45" font-weight="700" letter-spacing="-2.7">選んで、整えて、出す。</text>
+  <text x="84" y="397" fill="#5b6679" font-family="'Zen Maru Gothic', sans-serif" font-size="19" font-weight="600">PCの写真やスクショを、</text>
+  <text x="84" y="427" fill="#5b6679" font-family="'Zen Maru Gothic', sans-serif" font-size="19" font-weight="600">まとめて見て選べるWindowsアプリ。</text>
 
   <g filter="url(#shadow)">
     <rect x="608" y="127" width="518" height="323" rx="12" fill="#171725" />
     <g clip-path="url(#screenClip)">
-      <image href="cabina-library-screen.png" x="608" y="127" width="518" height="323" preserveAspectRatio="xMidYMid slice" />
+      <image href="hero-library-overview-screen.png" x="608" y="127" width="518" height="323" preserveAspectRatio="xMidYMid slice" />
     </g>
     <rect x="608" y="127" width="518" height="323" rx="12" fill="none" stroke="#fff" stroke-opacity="0.25" />
   </g>
