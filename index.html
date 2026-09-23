@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Zen+Maru+Gothic:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/app.css?v=card-gallery-5" />
+  <link rel="stylesheet" href="css/app.css?v=card-gallery-6" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LC9BH5H0R2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -149,10 +149,23 @@
         <article class="timeline-card watch">
           <h3>使う場所に合わせて、<br />書き出す。</h3>
           <p>用途に合うサイズで画像を保存。<br />複数の写真はGIFやZIPにまとめて書き出せます。</p>
-          <figure class="timeline-visual watch-screen">
-            <img class="watch-screen-before" src="assets/timeline-watch-before-screen.png" alt="" />
-            <img class="watch-screen-after" src="assets/timeline-watch-after-screen.png" alt="" />
-            <span class="watch-change" aria-hidden="true"></span>
+          <figure class="timeline-visual card-gallery" aria-label="画像を用途に合わせて書き出す手順" data-card-gallery>
+            <div class="card-gallery-stage">
+              <div class="card-gallery-panel is-active" role="group" aria-label="SNS向けサイズで画像を切り抜く">
+                <img src="assets/card-export-sns-size.png" alt="SNS投稿サイズに合わせて画像をトリミングするCabinaの画面" />
+              </div>
+              <div class="card-gallery-panel" role="group" aria-label="複数の写真をGIFにする" hidden>
+                <img src="assets/card-export-gif.png" alt="複数の写真からGIFを作成するCabinaの画面" />
+              </div>
+              <div class="card-gallery-panel" role="group" aria-label="複数の写真をZIPにまとめる" hidden>
+                <img src="assets/card-export-zip.png" alt="複数の写真をZIPにまとめて保存するCabinaの画面" />
+              </div>
+            </div>
+            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous>&lt;</button>
+            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next>&gt;</button>
+            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中">
+              <i class="is-active" data-card-gallery-dot></i><i data-card-gallery-dot></i><i data-card-gallery-dot></i>
+            </figcaption>
           </figure>
         </article>
       </div>
