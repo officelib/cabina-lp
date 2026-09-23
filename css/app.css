@@ -41,9 +41,9 @@ nav { display: flex; align-items: center; gap: 28px; color: var(--muted); font-s
 /* 中央にコピーと製品画面を積む、Apple風だがCabina固有のヒーロー骨格 */
 .hero { padding: 156px 0 0; background: radial-gradient(circle at 78% 24%, rgba(255,79,163,.15), transparent 26%), radial-gradient(circle at 84% 64%, rgba(20,201,201,.21), transparent 30%), var(--cream); }
 .hero-grid { display: flex; flex-direction: column; gap: 62px; text-align: center; }
-.hero-copy { display: grid; width: min(100%, 860px); justify-items: center; margin: 0 auto; }
+.hero-copy { display: grid; width: min(100%, 1000px); justify-items: center; margin: 0 auto; }
 .hero-copy > p { max-width: 640px; }
-.hero-copy h1 { max-width: 860px; margin-bottom: 30px; }
+.hero-copy h1 { max-width: 1000px; margin-bottom: 30px; }
 .hero-actions { justify-content: center; }
 .hero-product { width: min(900px, 100%); margin: 0 auto; }
 .hero-product { overflow: hidden; border-radius: 12px; }
