@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
   <title id="title">Cabina — 写真・スクショを、選んで、整えて、出す。</title>
   <desc id="description">Cabinaの実アイコンと実際のアプリ画面を使った共有カード</desc>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&amp;family=Zen+Maru+Gothic:wght@700&amp;display=block');</style>
   <defs>
     <radialGradient id="aquaGlow" cx="0" cy="1" r="0.9">
       <stop offset="0" stop-color="#bdf9f5" stop-opacity="0.95" />
