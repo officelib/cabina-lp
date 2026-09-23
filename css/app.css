@@ -215,3 +215,7 @@ main > .hero,main > .problem,main > .how-it-works,main > .find,main > .edit-save
 
 /* ギャラリーの操作は左右矢印だけにし、画像上のページネーションは表示しない */
 .card-gallery-pagination { display: none; }
+
+/* セクション3のサイズ選択カードも、実機画面を余白なく見せる */
+.crop-card .crop-mock.card-gallery { position: relative; background: #171522; }
+.crop-card .crop-mock.card-gallery .card-gallery-panel img { object-fit: contain; }
