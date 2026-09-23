@@ -129,7 +129,7 @@
 })();
 /* ▲ [hero-gallery] */
 
-/* ▼ [card-gallery] 説明カード内の実写を手動で切り替える */
+/* ▼ [card-gallery] 説明カード内の実写をホバーで切り替える */
 (() => {
   "use strict";
 
@@ -140,21 +140,67 @@
     const dots = [...gallery.querySelectorAll("[data-card-gallery-dot]")];
     const pagination = gallery.querySelector(".card-gallery-pagination");
     let activeIndex = 0;
+    let hideTimer;
+    let autoTimer;
 
-    const showPanel = (index) => {
-      activeIndex = (index + panels.length) % panels.length;
-      panels.forEach((panel, panelIndex) => {
-        const isActive = panelIndex === activeIndex;
-        panel.classList.toggle("is-active", isActive);
-        panel.hidden = !isActive;
-      });
+    const showPanel = (index, immediately = false) => {
+      const nextIndex = (index + panels.length) % panels.length;
+      const outgoing = panels[activeIndex];
+      const incoming = panels[nextIndex];
+
+      clearTimeout(hideTimer);
+
+      if (immediately) {
+        panels.forEach((panel, panelIndex) => {
+          const isActive = panelIndex === nextIndex;
+          panel.hidden = !isActive;
+          panel.classList.toggle("is-active", isActive);
+        });
+      } else if (nextIndex !== activeIndex) {
+        incoming.hidden = false;
+        incoming.classList.remove("is-active");
+        requestAnimationFrame(() => {
+          incoming.classList.add("is-active");
+          outgoing.classList.remove("is-active");
+        });
+        hideTimer = setTimeout(() => {
+          panels.forEach((panel, panelIndex) => {
+            if (panelIndex !== nextIndex) panel.hidden = true;
+          });
+        }, 400);
+      }
+
+      activeIndex = nextIndex;
       dots.forEach((dot, dotIndex) => dot.classList.toggle("is-active", dotIndex === activeIndex));
       pagination.setAttribute("aria-label", `${activeIndex + 1}枚目を表示中`);
     };
 
-    previous.addEventListener("click", () => showPanel(activeIndex - 1));
-    next.addEventListener("click", () => showPanel(activeIndex + 1));
-    showPanel(0);
+    const stopAuto = () => clearTimeout(autoTimer);
+    const startAuto = () => {
+      if (!window.matchMedia("(hover: hover)").matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      stopAuto();
+      autoTimer = setTimeout(function rotate() {
+        showPanel(activeIndex + 1);
+        autoTimer = setTimeout(rotate, 2600);
+      }, 1200);
+    };
+
+    previous.addEventListener("click", () => {
+      stopAuto();
+      showPanel(activeIndex - 1);
+      startAuto();
+    });
+    next.addEventListener("click", () => {
+      stopAuto();
+      showPanel(activeIndex + 1);
+      startAuto();
+    });
+    gallery.addEventListener("mouseenter", startAuto);
+    gallery.addEventListener("mouseleave", () => {
+      stopAuto();
+      showPanel(0);
+    });
+    showPanel(0, true);
   });
 })();
 /* ▲ [card-gallery] */
