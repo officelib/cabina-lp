@@ -185,7 +185,7 @@ main {
     radial-gradient(ellipse 64% 14% at 84% 90%, rgba(20,201,201,.21), transparent 100%),
     var(--cream);
 }
-main > .hero,main > .problem,main > .how-it-works,main > .find,main > .edit-save,main > .voice,main > .faq,main > .purchase { background: transparent; }
+main > .hero,main > .problem,main > .how-it-works,main > .find,main > .edit-save,main > .batch-edit,main > .voice,main > .faq,main > .purchase { background: transparent; }
 /* ▲ [continuous-gradient] */
 
 /* ▼ [purchase-legal-links] 購入案内の下に置く控えめな法務リンク */
