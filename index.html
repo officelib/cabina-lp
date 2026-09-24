@@ -274,7 +274,18 @@
         </article>
         <article class="batch-edit-card text-card">
           <div><h3>SNS用に、<br />まとめて書き出す。</h3><p>選んだ写真をSNSに合うサイズで、まとめて保存できます。</p></div>
-          <figure class="batch-edit-visual text-visual" aria-label="複数枚に文字やロゴを反映する画面のスクリーンショットを追加予定"><b>Tt</b><i>すべての画像に適用</i></figure>
+          <figure class="batch-edit-visual text-visual card-gallery" aria-label="複数枚の写真を書き出すCabinaの画面" data-card-gallery>
+            <div class="card-gallery-stage">
+              <div class="card-gallery-panel is-active" role="group" aria-label="複数枚の写真を書き出す">
+                <img src="assets/card-batch-export.png" alt="複数枚の写真を書き出すCabinaの画面" />
+              </div>
+            </div>
+            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous hidden>&lt;</button>
+            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next hidden>&gt;</button>
+            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中">
+              <i class="is-active" data-card-gallery-dot></i>
+            </figcaption>
+          </figure>
         </article>
       </div>
     </section>
