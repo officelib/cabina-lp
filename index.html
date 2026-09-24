@@ -253,7 +253,24 @@
         </article>
         <article class="batch-edit-card adjust-card">
           <div><h3>文字や画像も、<br />まとめて。</h3><p>文字入れや画像の追加も、選んだ写真すべてに一括で反映できます。</p></div>
-          <figure class="batch-edit-visual adjust-visual" aria-label="複数枚に調整を反映する画面のスクリーンショットを追加予定"><b>明るさ</b><i></i><b>彩度</b><i></i><b>回転</b><i></i></figure>
+          <figure class="batch-edit-visual adjust-visual card-gallery" aria-label="複数枚に文字をまとめて反映する手順" data-card-gallery>
+            <div class="card-gallery-stage">
+              <div class="card-gallery-panel is-active" role="group" aria-label="文字を入れる写真を選ぶ">
+                <img src="assets/card-batch-text-before.png" alt="文字を入れる前のCabinaの画面" />
+              </div>
+              <div class="card-gallery-panel" role="group" aria-label="文字を調整する" hidden>
+                <img src="assets/card-batch-text-controls.png" alt="文字入れを調整するCabinaの画面" />
+              </div>
+              <div class="card-gallery-panel" role="group" aria-label="文字を複数枚に反映する" hidden>
+                <img src="assets/card-batch-text-applied.png" alt="文字を複数枚に反映したCabinaの画面" />
+              </div>
+            </div>
+            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous>&lt;</button>
+            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next>&gt;</button>
+            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中">
+              <i class="is-active" data-card-gallery-dot></i><i data-card-gallery-dot></i><i data-card-gallery-dot></i>
+            </figcaption>
+          </figure>
         </article>
         <article class="batch-edit-card text-card">
           <div><h3>SNS用に、<br />まとめて書き出す。</h3><p>選んだ写真をSNSに合うサイズで、まとめて保存できます。</p></div>
