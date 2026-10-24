@@ -1,27 +1,34 @@
-/* Stripe Checkout後のライセンスキー確認ページ */
+/* Stripe Checkout後のライセンスキー確認ページ。2026-10-24 に LP（css/lp.css）のリデザインへ合わせた。
+   色・書体の値は css/lp.css の :root と揃える（このページは lp.css を読み込まない） */
+:root {
+  --ink: #121212; --copy: #444; --gray: #757575; --line: #d9d9d9; --muted-bg: #f9f9f9;
+  --en: "Jost", "Zen Kaku Gothic New", sans-serif; --ja: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+}
 * { box-sizing: border-box; }
-html { min-height: 100%; background: var(--cream); }
-body { min-height: 100vh; margin: 0; color: var(--ink); font-family: var(--font-family); }
-.complete-header { display: flex; width: min(1120px,calc(100% - 48px)); height: 78px; align-items: center; margin: 0 auto; }
-.complete-brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); font-size: 25px; font-weight: 700; letter-spacing: -.04em; text-decoration: none; }
+html { min-height: 100%; background: #fff; }
+body { min-height: 100vh; margin: 0; color: var(--ink); font-family: var(--ja); }
+.complete-header { display: flex; width: min(1240px, calc(100% - 48px)); height: 64px; align-items: center; margin: 0 auto; }
+.complete-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font: 500 22px/1 var(--en); letter-spacing: .01em; text-decoration: none; }
 .complete-brand img { display: block; width: 28px; height: 28px; }
-.complete-main { display: grid; min-height: calc(100vh - 78px); place-items: center; padding: 32px 24px 78px; background: radial-gradient(ellipse 70% 40% at 12% 0%,rgba(20,201,201,.2),transparent 70%),radial-gradient(ellipse 70% 45% at 92% 98%,rgba(255,79,163,.18),transparent 72%),var(--cream); }
-.complete-card { width: min(100%,640px); padding: 56px 52px 45px; border: 1px solid rgba(23,23,37,.11); border-radius: 24px; background: rgba(255,255,255,.86); box-shadow: 0 24px 66px rgba(37,44,69,.12); text-align: center; }
-.complete-mark { display: grid; width: 52px; height: 52px; place-items: center; margin: 0 auto 22px; border-radius: 50%; background: linear-gradient(135deg,var(--teal),#77e5d7); box-shadow: 0 10px 22px rgba(20,201,201,.27); color: #fff; font-size: 30px; font-weight: 700; }
-.complete-eyebrow { margin: 0 0 9px; color: var(--teal-deep); font-size: 13px; font-weight: 700; letter-spacing: .08em; }
-.complete-card h1 { margin: 0; font-size: clamp(25px,4vw,34px); letter-spacing: -.045em; line-height: 1.38; }
-.complete-lead { min-height: 3.4em; margin: 18px auto 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
-.license-panel { margin-top: 29px; padding: 25px 20px 22px; border: 1px solid rgba(20,201,201,.33); border-radius: 15px; background: linear-gradient(135deg,rgba(216,248,248,.72),rgba(255,255,255,.95)); }
-.license-label { margin: 0 0 11px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .08em; }
-.license-key { display: block; overflow-wrap: anywhere; color: var(--ink); font-family: ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace; font-size: clamp(19px,3.3vw,27px); font-weight: 700; letter-spacing: .055em; line-height: 1.45; }
-.copy-button { min-height: 44px; margin-top: 20px; padding: 0 22px; border: 0; border-radius: 999px; background: var(--ink); color: #fff; cursor: pointer; font: inherit; font-size: 13px; font-weight: 700; transition: transform .18s ease,background .18s ease; }
-.copy-button:hover { transform: translateY(-1px); background: #34334b; }
-.copy-button:focus-visible,.installer-link:focus-visible,.back-link:focus-visible { outline: 3px solid rgba(20,201,201,.65); outline-offset: 3px; }
-.copy-status { min-height: 1.6em; margin: 10px 0 0; color: var(--teal-deep); font-size: 12px; font-weight: 700; }
-.license-note { margin: 7px 0 0; color: var(--muted); font-size: 13px; }
-.installer-link { display: inline-grid; gap: 4px; margin-top: 21px; border-bottom: 1px solid rgba(23,23,37,.28); padding-bottom: 4px; color: var(--ink); font-size: 12px; font-weight: 700; line-height: 1.6; text-decoration: none; }.installer-link span { color: var(--teal-deep); font-size: 13px; }.installer-link:hover { border-color: var(--teal-deep); color: var(--teal-deep); }.installer-link:hover span { color: var(--teal-deep); }
+.complete-main { display: grid; min-height: calc(100vh - 64px); place-items: center; padding: 32px 24px 78px; background: var(--muted-bg); border-top: 1px solid rgba(0,0,0,.06); }
+.complete-card { width: min(100%, 640px); padding: 56px 52px 45px; border: 1px solid #e6e6e6; border-radius: 14px; background: #fff; box-shadow: 0 24px 50px -28px rgba(0,0,0,.25); text-align: center; }
+.complete-mark { display: grid; width: 52px; height: 52px; place-items: center; margin: 0 auto 22px; border-radius: 50%; background: var(--ink); color: #fff; font-size: 26px; font-weight: 700; }
+.complete-eyebrow { margin: 0 0 9px; color: var(--gray); font: 400 13px var(--en); letter-spacing: .08em; }
+.complete-card h1 { margin: 0; font-size: clamp(24px, 4vw, 32px); font-weight: 700; line-height: 1.45; }
+.complete-lead { min-height: 3.4em; margin: 18px auto 0; color: var(--copy); font-size: 14px; line-height: 1.9; }
+.license-panel { margin-top: 29px; padding: 25px 20px 22px; border: 1px solid var(--line); border-top: 2px solid var(--ink); border-radius: 0 0 12px 12px; background: #fff; }
+.license-label { margin: 0 0 11px; color: var(--gray); font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+.license-key { display: block; overflow-wrap: anywhere; color: var(--ink); font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; font-size: clamp(19px, 3.3vw, 27px); font-weight: 700; letter-spacing: .055em; line-height: 1.45; }
+.copy-button { min-height: 44px; margin-top: 20px; padding: 0 22px; border: 0; border-radius: 999px; background: var(--ink); color: #fff; cursor: pointer; font: inherit; font-size: 13px; font-weight: 700; transition: transform .18s ease, background .18s ease; }
+.copy-button:hover { transform: translateY(-1px); background: #333; }
+.copy-button:focus-visible, .installer-link:focus-visible, .back-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.copy-status { min-height: 1.6em; margin: 10px 0 0; color: var(--ink); font-size: 12px; font-weight: 700; }
+.license-note { margin: 7px 0 0; color: var(--copy); font-size: 13px; }
+.installer-link { display: inline-grid; gap: 4px; margin-top: 21px; border-bottom: 1px solid #cfcfcf; padding-bottom: 4px; color: var(--ink); font-size: 12px; font-weight: 700; line-height: 1.6; text-decoration: none; }
+.installer-link span { color: var(--gray); font-size: 13px; }
+.installer-link:hover { border-color: var(--ink); } .installer-link:hover span { color: var(--ink); }
 .test-mode-note { margin: 13px 0 0; color: #ae456c; font-size: 12px; font-weight: 700; }
-.back-link { display: inline-block; margin-top: 32px; color: var(--muted); font-size: 13px; text-decoration-color: rgba(91,102,121,.45); text-underline-offset: 4px; }
+.back-link { display: inline-block; margin-top: 32px; color: var(--gray); font-size: 13px; text-decoration-color: #cfcfcf; text-underline-offset: 4px; }
 .back-link:hover { color: var(--ink); }
-@media (max-width: 600px) { .complete-header { width: min(100% - 34px,600px); height: 66px; }.complete-brand { font-size: 23px; }.complete-main { min-height: calc(100vh - 66px); padding: 22px 17px 52px; }.complete-card { padding: 42px 22px 34px; border-radius: 19px; }.complete-mark { width: 47px; height: 47px; margin-bottom: 19px; font-size: 27px; }.license-panel { padding: 22px 13px 19px; }.license-key { font-size: 18px; letter-spacing: .025em; } }
+@media (max-width: 600px) { .complete-header { width: min(100% - 34px, 600px); height: 60px; } .complete-main { min-height: calc(100vh - 60px); padding: 22px 17px 52px; } .complete-card { padding: 42px 22px 34px; } .complete-mark { width: 47px; height: 47px; margin-bottom: 19px; font-size: 24px; } .license-panel { padding: 22px 13px 19px; } .license-key { font-size: 18px; letter-spacing: .025em; } }
 @media (prefers-reduced-motion: reduce) { .copy-button { transition: none; } }

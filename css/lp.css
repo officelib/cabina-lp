@@ -1,0 +1,173 @@
+/* Cabina LP（2026-10-24 リデザイン）。見た目の正は docs/redesign/cabina-lp-mock.html。office lib. の HP と同じ地・書体 */
+:root {
+  --dark: #161616; --white: #fff; --muted-bg: #f9f9f9; --line: #d9d9d9; --copy: #444; --gray: #757575;
+  --orange: #F0A46B; --green: #5CC0B5; --blue: #7C9CF0; --pink: #E58C9A;
+  --en: "Jost", "Zen Kaku Gothic New", sans-serif; --ja: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --ease: cubic-bezier(.2, .8, .2, 1);
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--ja); color: #121212; background: var(--white); }
+a { color: inherit; }
+
+/* ▼ ヘッダー（HPと同じ白黒・細い文字） */
+.head { position: fixed; z-index: 50; transition: background .35s, color .35s, padding .35s, box-shadow .35s; left: 0; right: 0; top: 0; display: flex; align-items: center; justify-content: space-between; padding: 24px 56px; color: #f2f2f2; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand img { width: 30px; height: 30px; }
+.brand b { font: 500 22px/1 var(--en); letter-spacing: .01em; }
+.brand small { font: 400 11px var(--en); color: #9a9a9a; margin-left: 6px; }
+.nav { display: flex; gap: 32px; align-items: center; font-size: 13px; }
+.nav a { text-decoration: none; color: #cfcfcf; } .nav a:hover { color: #fff; }
+.nav .buy { color: #121212; background: #f2f2f2; padding: 9px 18px; border-radius: 999px; font-weight: 700; }
+
+/* ▼ ヒーロー：HPトップと同じ暗い地に半透明の板 */
+.hero { position: relative; overflow: hidden; min-height: 100vh; background: var(--dark); color: #f2f2f2; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); align-items: center; gap: 40px; padding: 120px 56px 72px; }
+.planes { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.hero > :not(.planes) { position: relative; z-index: 1; }
+.copy { max-width: 600px; }
+.nw { white-space: nowrap; }
+h1 { margin: 26px 0 22px; font-size: clamp(30px, 3.2vw, 46px); line-height: 1.42; font-weight: 700; letter-spacing: .01em; }
+.lead { margin: 0; font-size: 16px; line-height: 2; color: #cfcfcf; max-width: 34em; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 26px 0 34px; padding: 0; list-style: none; font-size: 13px; color: #bdbdbd; }
+.facts li { display: flex; align-items: center; gap: 8px; } .facts li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--c); }
+.cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.btn { display: inline-flex; align-items: center; height: 50px; padding: 0 28px; border-radius: 999px; font-size: 15px; font-weight: 700; text-decoration: none; transition: background .2s, transform .3s var(--ease); }
+.btn.main { background: #f2f2f2; color: #121212; } .btn.main:hover { background: #fff; transform: translateY(-1px); }
+.btn.sub { border: 1px solid rgba(255,255,255,.22); color: #e6e6e6; } .btn.sub:hover { background: rgba(255,255,255,.07); }
+.btn.sub span { font: 400 14px var(--en); margin-left: 10px; color: #bdbdbd; }
+.note { margin: 14px 0 0; font-size: 12px; color: #8f8f8f; }
+
+/* ▼ 右側：選ぶ・整える・出す の3枚を、HPの板のように重ねる */
+.flow { position: relative; height: min(62vh, 560px); }
+.plate { position: absolute; width: 74%; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,.12); box-shadow: 0 30px 60px -20px rgba(0,0,0,.6); background: #111; transition: transform .6s var(--ease); }
+.plate img { display: block; width: 100%; }
+.plate figcaption { position: absolute; left: 14px; top: 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: #121212; background: rgba(242,242,242,.94); padding: 5px 12px 5px 8px; border-radius: 999px; }
+.plate figcaption b { width: 20px; height: 20px; border-radius: 50%; display: grid; place-content: center; font: 500 11px var(--en); color: #fff; background: var(--c); }
+.p1 { left: 0; top: 0; transform: rotate(-3deg); }
+.p2 { left: 13%; top: 22%; transform: rotate(1.5deg); }
+.p3 { left: 26%; top: 44%; transform: rotate(4deg); }
+.flow:hover .p1 { transform: rotate(-5deg) translate(-12px, -8px); } .flow:hover .p3 { transform: rotate(6deg) translate(12px, 8px); }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+/* ▼ ヒーローより下：office lib. HP の下の節と同じ作り（大きい英字の見出し・細い線・番号） */
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 48px; }
+.sec { position: relative; padding: 120px 0; } .sec.gray { background: var(--muted-bg); }
+.sec.dark { background: var(--dark); color: #f2f2f2; overflow: hidden; } .sec.dark > .wrap { position: relative; z-index: 1; }
+.row { display: flex; gap: 64px; align-items: flex-start; } .row .title { flex: 0 0 34%; } .side { flex: 1; min-width: 0; }
+.title { margin: 0 0 40px; font: 400 clamp(48px, 7vw, 96px)/1.1 var(--en); letter-spacing: -.01em; }
+/* 見出しの塗り替え（HPのwipe-titleと同じ考え方）：薄い字の上を濃い字が左から覆う */
+.wipe { position: relative; display: inline-block; color: #e2e2e2; }
+.wipe span { position: absolute; left: 0; top: 0; color: #121212; clip-path: inset(0 100% 0 0); transition: clip-path 1.2s var(--ease); white-space: nowrap; }
+.wipe::before { content: attr(data-t); }
+.wipe.in span { clip-path: inset(0 0 0 0); }
+.dark-t { color: #3a3a3a; } .dark-t span { color: #fff; }
+.copy { margin: 10px 0 28px; font-size: clamp(22px, 2.4vw, 32px); font-weight: 700; line-height: 1.55; } .copy.light { color: #f2f2f2; }
+.lead-dark { margin: -16px 0 40px; font-size: 18px; font-weight: 700; }
+.pains { list-style: none; margin: 0 0 36px; padding: 0; border-top: 1px solid var(--line); }
+.pains li { display: flex; align-items: center; gap: 14px; padding: 18px 2px; border-bottom: 1px solid #e6e6e6; font-size: 16px; }
+.pains b { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--c); }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; }
+.stats div { padding-right: 20px; } .stats dt { display: flex; align-items: baseline; gap: 4px; } .stats dt .en { font: 400 34px/1.2 var(--en); } .stats dt small { font: 400 13px var(--en); color: var(--gray); }
+.stats dd { margin: 6px 0 0; font-size: 12px; color: var(--gray); }
+.flow-list { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--line); }
+.flow-step { display: flex; flex-direction: column; gap: 16px; padding: 8px 32px 24px; border-right: 1px solid var(--line); }
+.flow-step .num { font: 300 56px/1 var(--en); color: #c7c7c7; transition: color .4s; } .flow-step:hover .num { color: var(--c); }
+.flow-step b { font-size: 19px; } .flow-step p { margin: 0; font-size: 14px; line-height: 1.9; color: var(--copy); }
+.shot { border-radius: 10px; overflow: hidden; border: 1px solid #e3e3e3; background: #fff; aspect-ratio: 16 / 10; }
+.browser { display: grid; grid-template-columns: 34% 1fr; gap: 64px; align-items: center; }
+.tablist { display: flex; flex-direction: column; border-top: 1px solid #121212; }
+.tablist button { all: unset; cursor: pointer; position: relative; min-height: 80px; padding: 0 2px; display: flex; align-items: center; border-bottom: 1px solid var(--line); font-size: 18px; color: #9a9a9a; transition: color .3s, padding .4s var(--ease); }
+.tablist button::before { content: ""; position: absolute; left: 0; bottom: -1px; height: 2px; width: 0; background: var(--c); transition: width .5s var(--ease); }
+.tablist button[aria-selected="true"] { color: #121212; font-weight: 700; padding-left: 14px; } .tablist button[aria-selected="true"]::before { width: 100%; }
+.tablist button:focus-visible { outline: 2px solid #121212; outline-offset: 2px; }
+.panels { position: relative; min-height: 320px; display: grid; }
+.panel { grid-area: 1 / 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 26px; opacity: 0; transform: translateY(10px); transition: opacity .5s, transform .5s var(--ease); pointer-events: none; }
+.panel.on { opacity: 1; transform: none; pointer-events: auto; }
+.panel p { max-width: 30em; margin: 0; font-size: 15px; line-height: 2; color: var(--copy); }
+.days { list-style: none; margin: 0 0 36px; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 20px; border-top: 1px solid rgba(255,255,255,.12); }
+.days li { padding: 18px 0 16px; font-size: 18px; font-weight: 500; border-bottom: 2px solid var(--c); display: flex; flex-direction: column; gap: 6px; }
+.days .v { display: flex; align-items: baseline; gap: 4px; min-height: 32px; } .days li .en { font: 300 30px/1 var(--en); } .days small { font-size: 12px; font-weight: 400; color: #9a9a9a; }
+.sec.dark .note { color: #8f8f8f; }
+details { border-top: 1px solid var(--line); padding: 22px 2px; } details:last-of-type { border-bottom: 1px solid var(--line); }
+summary { cursor: pointer; font-size: 16px; font-weight: 500; list-style: none; display: flex; justify-content: space-between; gap: 20px; } summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font: 300 24px/1 var(--en); color: var(--gray); transition: transform .3s var(--ease); } details[open] summary::after { transform: rotate(45deg); }
+details p { margin: 12px 0 0; font-size: 14px; line-height: 1.95; color: var(--copy); }
+.foot { background: var(--dark); color: #9a9a9a; font-size: 12px; padding: 28px 0; }
+.foot-in { display: flex; justify-content: space-between; align-items: center; } .foot nav { display: flex; gap: 22px; } .foot a { text-decoration: none; } .foot a:hover { color: #fff; } .foot .en:first-child { color: #f2f2f2; font-size: 15px; }
+@media (max-width: 900px) { .hero, .row, .browser, .flow-list, .days, .stats { grid-template-columns: 1fr; } .row { flex-direction: column; gap: 0; } .days { grid-template-columns: 1fr 1fr; } .hero { padding: 110px 24px 60px; } .wrap { padding: 0 24px; } .nav a:not(.buy) { display: none; } .head { padding: 18px 24px; } .flow-list { border-left: 0; } .flow-step { border-right: 0; border-bottom: 1px solid var(--line); padding: 20px 0; } .foot-in { flex-direction: column; gap: 12px; } }
+@media (prefers-reduced-motion: reduce) { .wipe span { clip-path: none; transition: none; } }
+/* スマホ幅：見出しの2行目（12文字・折り返さない）が 30px だと画面の端まで届くので小さくする */
+@media (max-width: 480px) { h1 { font-size: 26px; } }
+
+/* ▼ 最後の案内：白地に、名刺の表と同じ「右側だけのグラデの板」。中央にアイコンと見出し */
+.closing { background: #fff; overflow: hidden; padding: 140px 0 130px; }
+.closing .planes { z-index: 0; } .closing-in { position: relative; z-index: 1; text-align: center; }
+.app-icon { display: block; margin: 0 auto 34px; border-radius: 26px; box-shadow: 0 24px 50px -18px rgba(255, 79, 163, .35), 0 10px 24px -12px rgba(0,0,0,.35); animation: bob 6s ease-in-out infinite; }
+@keyframes bob { 50% { transform: translateY(-6px); } }
+.closing h2 { margin: 0 0 34px; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.5; }
+.center-cta { justify-content: center; }
+.btn.dark { background: #121212; color: #fff; } .btn.dark:hover { background: #333; }
+.btn.line { border: 1px solid #cfcfcf; color: #121212; } .btn.line:hover { border-color: #121212; } .btn .en { font-weight: 400; margin-left: 8px; }
+@media (prefers-reduced-motion: reduce) { .app-icon { animation: none; } }
+
+/* ▼ Feature：左の項目に合わせて、右の線のイラストと説明が切り替わる */
+.browser { grid-template-columns: 32% 1fr; align-items: start; }
+.panels { min-height: 0; }
+.panel { justify-content: flex-start; gap: 20px; }
+.screen { --ill-bg: #F6F6F4; position: relative; width: 100%; border-radius: 12px; overflow: hidden; border: 1px solid #e3e3e0; background: var(--ill-bg); aspect-ratio: 16 / 10; }
+.panel p { text-align: left; align-self: flex-start; }
+.shot { --ill-bg: #fff; }
+
+/* ▼ 線のイラスト（Flow・Feature。2026-10-24 本人の判断で画面写真から差し替え。ヒーローだけ画面写真）。
+   作りはモダン見本帳 15「線で描かれていくイラスト」（デザイン集/04_モダン見本帳）と同じ：
+   文字なし。黒の線に、節の色（--c）の線を1色だけ混ぜる。塗りは、手前の絵が奥の線を隠すための地の色（--ill-bg）だけ */
+.ill { display: block; width: 100%; height: 100%; }
+.ill :is(rect, circle, path) { fill: none; stroke: #121212; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ill .s { stroke: #bdbdbd; }
+.ill .ac { stroke: var(--c); }
+.ill .af { fill: var(--c); stroke: none; }
+.ill .wk { stroke: #fff; stroke-width: 2.5; }
+.panel.on .ill .wk { animation: ill-in .5s ease 1.6s both; }
+.ill .fg { fill: var(--ill-bg, #fff); }
+.ill .dash { stroke-dasharray: 2 7; }
+/* Flow の枠は Feature の半分ほどの幅なので、線を少し太くして細くなりすぎないようにする */
+.shot .ill :is(rect, circle, path) { stroke-width: 3; }
+/* 線の動き：js/lp.js が線ごとの長さ --len と描き始めのずれ --d を入れ、.dr を付ける（JS が無ければ普通の線のまま）。
+   Feature は項目を選んだときに1回描いて止め、色の線は少し遅れて描く（消えるくり返しは途中の絵が欠けて見えるのでやめた）。
+   描き終わったら絵全体がゆっくり浮く。Flow は見えたときに1回だけ描く */
+.ill .dr { stroke-dasharray: var(--len) var(--len); stroke-dashoffset: var(--len); }
+.panel.on .ill .dr { animation: ill-draw 1.4s var(--ease) var(--d, 0s) both; }
+.flow-step.in .ill .dr { animation: ill-draw 1.8s var(--ease) var(--d, 0s) both; }
+.panel.on .ill .af { animation: ill-in .5s ease var(--d, 1.2s) both; }
+.panel.on .ill .ac.dr { animation: ill-draw 1s var(--ease) calc(var(--d, 0s) + .5s) both; }
+.panel.on .ill { animation: ill-float 6s ease-in-out 2s infinite; }
+@keyframes ill-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ill-float { 50% { transform: translateY(-4px); } }
+.flow-step:not(.in) .ill .af { opacity: 0; } .flow-step.in .ill .af { transition: opacity .6s 1.4s; }
+@keyframes ill-loop { 0% { stroke-dashoffset: var(--len); } 40%, 72% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: calc(var(--len) * -1); } }
+@keyframes ill-draw { from { stroke-dashoffset: var(--len); } to { stroke-dashoffset: 0; } }
+@keyframes ill-dot { 0%, 30% { opacity: 0; } 42%, 72% { opacity: 1; } 90%, 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .ill .dr { animation: none !important; stroke-dashoffset: 0; }
+  .ill .af { animation: none !important; opacity: 1 !important; }
+  .ill { animation: none !important; }
+}
+
+/* ▼ ヘッダー：スクロールしても上に付いてくる。ヒーローを過ぎたら白い帯に変わる */
+.head.scrolled { background: rgba(255,255,255,.88); backdrop-filter: blur(12px); color: #121212; padding-top: 14px; padding-bottom: 14px; box-shadow: 0 1px 0 rgba(0,0,0,.06); }
+.head.scrolled .nav a { color: #555; } .head.scrolled .nav a:hover { color: #121212; }
+.head.scrolled .nav .buy { background: #121212; color: #fff; }
+.head.scrolled .brand small { color: #8f8f8f; }
+html { scroll-behavior: smooth; } section[id] { scroll-margin-top: 72px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* ▼ Windows 以外で開いたときの案内（device-notice.js が hidden を外す）。ヘッダーのすぐ下に出す。
+   ヘッダーの高さはスクロールで変わるので、js/lp.js が --head-h を入れる */
+.device-notice { position: fixed; z-index: 49; left: 0; right: 0; top: var(--head-h, 78px); padding: 10px 56px; background: #fff; border-bottom: 1px solid var(--line); font-family: var(--ja); transition: top .35s; }
+.device-notice-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 1240px; margin: 0 auto; }
+.device-notice p { display: flex; flex-wrap: wrap; gap: 0 10px; margin: 0; font-size: 13px; line-height: 1.7; color: #121212; }
+.device-notice strong { font-weight: 700; }
+.device-notice p span { color: var(--gray); }
+.device-notice button { flex: none; min-height: 34px; padding: 0 16px; border: 1px solid #cfcfcf; border-radius: 999px; background: #fff; color: #121212; font: 700 12px var(--ja); cursor: pointer; transition: border-color .2s; }
+.device-notice button:hover, .device-notice button:focus-visible { border-color: #121212; }
+.device-notice-visible .hero { padding-top: 190px; }
+@media (max-width: 900px) { .device-notice { padding: 10px 24px; } .device-notice-inner { align-items: flex-start; } .device-notice p { display: block; font-size: 12px; } .device-notice p span { display: block; } .device-notice-visible .hero { padding-top: 200px; } }

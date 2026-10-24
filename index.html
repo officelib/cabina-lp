@@ -4,27 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" sizes="64x64" href="assets/cabina-icon-64.png" />
-  <meta name="description" content="PCの写真やスクショを、まとめて見て選べるWindowsアプリ。" />
+  <meta name="description" content="似たカットを並べて使う1枚を選び、IDやロゴを複数の画像にまとめて入れて、X や Instagram など投稿先のサイズで書き出せる Windows アプリ。" />
   <link rel="canonical" href="https://cabinatrova.com/" />
   <meta property="og:site_name" content="Cabina" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Cabina | 写真・スクショを、選んで、整えて、出す。" />
-  <meta property="og:description" content="PCの写真やスクショを、まとめて見て選べるWindowsアプリ。" />
+  <meta property="og:title" content="Cabina | 撮りためた画像を、投稿できる形にするアプリ" />
+  <meta property="og:description" content="似たカットを並べて使う1枚を選び、IDやロゴを複数の画像にまとめて入れて、X や Instagram など投稿先のサイズで書き出せる Windows アプリ。" />
   <meta property="og:url" content="https://cabinatrova.com/" />
-  <meta property="og:image" content="https://cabinatrova.com/assets/ogp-card.png?v=20260924-font" />
+  <meta property="og:image" content="https://cabinatrova.com/assets/ogp-card.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="ja_JP" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cabina | 写真・スクショを、選んで、整えて、出す。" />
-  <meta name="twitter:description" content="PCの写真やスクショを、まとめて見て選べるWindowsアプリ。" />
-  <meta name="twitter:image" content="https://cabinatrova.com/assets/ogp-card.png?v=20260924-font" />
-  <title>Cabina | 写真・スクショを、選んで、整えて、出す。</title>
+  <meta name="twitter:title" content="Cabina | 撮りためた画像を、投稿できる形にするアプリ" />
+  <meta name="twitter:description" content="似たカットを並べて使う1枚を選び、IDやロゴを複数の画像にまとめて入れて、X や Instagram など投稿先のサイズで書き出せる Windows アプリ。" />
+  <meta name="twitter:image" content="https://cabinatrova.com/assets/ogp-card.png" />
+  <title>Cabina | 撮りためた画像を、投稿できる形にするアプリ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Zen+Maru+Gothic:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/app.css?v=card-gallery-17" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/lp.css?v=2" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LC9BH5H0R2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -32,281 +31,151 @@
     gtag('js', new Date());
     gtag('config', 'G-LC9BH5H0R2');
   </script>
-  <script src="js/lp-reveal.js?v=card-gallery-4" defer></script>
   <script src="js/device-notice.js" defer></script>
+  <script src="js/lp.js?v=2" defer></script>
 </head>
 <body>
-  <!-- ▼ [header] 最小限の固定ナビゲーション -->
-  <header class="site-header">
-    <div class="site-header-inner">
-      <a class="brand" href="#top" aria-label="Cabina トップへ"><img class="brand-icon" src="assets/cabina-icon-64.png" alt="" width="28" height="28" />Cabina</a>
-      <nav aria-label="ページ内ナビゲーション"><a href="#top">ホーム</a><a href="#find">できること</a><a href="#faq">FAQ</a></nav>
-      <a class="header-cta" href="https://buy.stripe.com/3cIfZj8a344Ra0h1WE5gc01">今すぐ購入</a>
+<header class="head">
+  <a class="brand" href="#"><img src="assets/cabina-icon.svg" alt=""><b>Cabina</b><small>by office lib.</small></a>
+  <nav class="nav"><a href="#how">できること</a><a href="#feature">探す</a><a href="#price">料金</a><a href="#faq">よくある質問</a><a class="buy" href="#price">購入する</a></nav>
+</header>
+<aside class="device-notice" data-device-notice hidden aria-label="対応環境の案内">
+  <div class="device-notice-inner">
+    <p><strong>CabinaはWindows 10 / 11専用です。</strong><span data-device-notice-message>お使いのPCでこのページを開いてください。</span></p>
+    <button type="button" data-device-notice-copy>URLをコピー</button>
+  </div>
+</aside>
+
+<section class="hero">
+  <svg class="planes" id="planes" aria-hidden="true"></svg>
+  <div class="copy">
+    <h1><span class="nw">撮りためた画像を、</span><br><span class="nw">投稿できる形にするアプリ</span></h1>
+    <p class="lead">似たカットを並べて使う1枚を選び、IDやロゴを複数の画像にまとめて入れて、X や Instagram など投稿先のサイズで書き出せます。</p>
+    <ul class="facts">
+      <li style="--c:var(--orange)">買い切り <span data-price></span></li>
+      <li style="--c:var(--green)">パソコンの中だけで動く</li>
+      <li style="--c:var(--blue)">元の画像は書き換えない</li>
+    </ul>
+    <div class="cta">
+      <a class="btn main" href="https://github.com/officelib/cabina-releases/releases/latest/download/Cabina-setup.zip" data-cta="trial" data-where="hero">30日間無料で試す</a>
+      <a class="btn sub" href="https://buy.stripe.com/cNibJ38a38l70pH58Q5gc03" data-cta="purchase" data-where="hero">購入する<span data-price></span></a>
     </div>
-  </header>
-  <!-- ▲ [header] -->
+    <p class="note">体験版でも、すべての機能を使えます。アカウント登録はいりません。</p>
+  </div>
+  <div class="flow" aria-label="Cabinaでの作業の流れ">
+    <figure class="plate p1" style="--c:var(--orange)"><img src="assets/cabina-library-screen.png" alt=""><figcaption><b>1</b>選ぶ</figcaption></figure>
+    <figure class="plate p2" style="--c:var(--green)"><img src="assets/hero-crop-screen.png" alt=""><figcaption><b>2</b>整える</figcaption></figure>
+    <figure class="plate p3" style="--c:var(--blue)"><img src="assets/copy-demo-after.png" alt=""><figcaption><b>3</b>書き出す</figcaption></figure>
+  </div>
+</section>
 
-  <aside class="device-notice" data-device-notice hidden aria-label="対応環境の案内">
-    <div class="device-notice-inner">
-      <p><strong>CabinaはWindows 10 / 11専用です。</strong><span data-device-notice-message>お使いのPCでこのページを開いてください。</span></p>
-      <button type="button" data-device-notice-copy>URLをコピー</button>
+<!-- ▼ Problem（HPのConceptと同じ形：大きい英字＋右に見出し・本文・数字） -->
+<section class="sec" id="problem">
+  <div class="wrap row">
+    <h2 class="title wipe"><span>Problem</span></h2>
+    <div class="side">
+      <p class="copy">撮った画像が、<br>投稿されないまま増えていく。</p>
+      <ul class="pains">
+        <li><b style="--c:var(--orange)"></b>似たカットが多くて、どれを上げるか決まらない</li>
+        <li><b style="--c:var(--green)"></b>IDやロゴを、投稿のたびに1枚ずつ入れ直している</li>
+        <li><b style="--c:var(--blue)"></b>X用、Instagram用と、投稿先ごとに作り直している</li>
+      </ul>
+      <dl class="stats">
+        <div><dt><span class="en">10</span><small>枚</small></dt><dd>まとめて編集できる枚数</dd></div>
+        <div><dt><span class="en">30</span><small>日</small></dt><dd>全部の機能を無料で試せる</dd></div>
+        <div><dt><span class="en" data-price></span></dt><dd>買い切り。月額なし</dd></div>
+      </dl>
     </div>
-  </aside>
+  </div>
+</section>
 
-  <main>
-    <!-- ▼ [hero] 速さを主役にしたファーストビュー -->
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1 id="hero-title">無数の画像・写真から<br />選んで、整えて、出す。<br />Cabinaひとつで。</h1>
-          <p>Cabinaは、PCの写真やスクショを、まとめて見て選べるWindowsアプリ。<br />素材や写真管理、各種SNS用画像作成など、これひとつで。</p>
-          <div class="hero-actions"><a class="primary-button uiverse-glow-button" href="https://github.com/officelib/cabina-releases/releases/latest/download/Cabina-setup.exe">Windows版をダウンロード</a></div>
-        </div>
+<!-- ▼ Flow（HPのFlowと同じ：大きい番号と縦線） -->
+<section class="sec gray" id="how">
+  <div class="wrap">
+    <h2 class="title wipe"><span>Flow</span></h2>
+    <p class="lead-dark">選ぶ・整える・書き出すが、Cabinaひとつで終わります。</p>
+    <ol class="flow-list">
+      <li class="flow-step" style="--c:var(--orange)"><span class="num en">01</span><div class="shot"><svg class="ill" viewBox="0 0 600 375" role="img" aria-label="広げた写真の中から1枚を選ぶところ"><g transform="rotate(-12 210 200)"><rect class="s" x="120" y="128" width="180" height="135" rx="12"/><path class="s" d="M134 236 L181 193 L214 217 L246 182 L286 225"/></g><g transform="rotate(12 390 200)"><rect class="s fg" x="300" y="128" width="180" height="135" rx="12"/><path class="s" d="M314 236 L361 193 L394 217 L426 182 L466 225"/></g><rect class="fg" x="205" y="92" width="190" height="142" rx="12"/><path d="M220 206 L270 160 L304 186 L338 149 L380 194"/><circle cx="346" cy="126" r="11"/><circle class="ac" cx="392" cy="96" r="18"/><path class="ac" d="M383 96l7 7 12-13"/><path class="fg" d="M352 198l0 50 13-12 10 22 10-5-10-21 17-1z"/><path class="ac" d="M338 186l-10-10M352 180v-14M326 200h-14"/></svg></div><b>選ぶ</b><p>登録したフォルダの画像が1つの一覧に並びます。似ている写真やお気に入りから候補を比べて、使う画像だけを選べます。</p></li>
+      <li class="flow-step" style="--c:var(--green)"><span class="num en">02</span><div class="shot"><svg class="ill" viewBox="0 0 600 375" role="img" aria-label="1枚に入れたロゴと明るさが、ほかの画像にも入るところ"><rect x="110" y="70" width="230" height="160" rx="12"/><path d="M128 198 L188 147 L230 176 L271 134 L322 185"/><circle cx="280" cy="108" r="13"/><rect class="ac" x="282" y="196" width="44" height="22" rx="6"/><path class="ac" d="M292 207h24"/><path d="M140 280h170"/><circle class="ac" cx="250" cy="280" r="9"/><circle cx="118" cy="280" r="7"/><path d="M118 264v-5M118 301v-5M102 280h-5M139 280h-5"/><rect class="s" x="400" y="78" width="110" height="78" rx="8"/><path class="s" d="M409 140 L437 115 L457 129 L477 109 L501 134"/><rect class="ac" x="478" y="134" width="22" height="12" rx="3"/><rect class="s" x="420" y="182" width="110" height="78" rx="8"/><path class="s" d="M429 244 L457 219 L477 233 L497 213 L521 238"/><rect class="ac" x="498" y="238" width="22" height="12" rx="3"/><path class="ac dash" d="M340 150C370 150 380 118 400 117"/><path class="ac dash" d="M340 170C380 175 395 218 420 221"/></svg></div><b>整える</b><p>1枚で決めた明るさ・文字・ロゴを、選んだ画像にまとめて反映できます。元の画像は変えず、別のファイルとして保存します。</p></li>
+      <li class="flow-step" style="--c:var(--blue)"><span class="num en">03</span><div class="shot"><svg class="ill" viewBox="0 0 600 375" role="img" aria-label="1枚の画像を、横長・正方形・縦長・GIF に書き出すところ"><rect x="70" y="130" width="150" height="112" rx="10"/><path d="M82 220 L121 184 L148 204 L175 175 L208 211"/><circle cx="181" cy="157" r="9"/><path class="ac" d="M232 170C290 120 330 92 372 92"/><path class="ac" d="M360 82l12 10-12 10"/><path class="ac" d="M232 186H372"/><path class="ac" d="M360 176l12 10-12 10"/><path class="ac" d="M232 202C290 252 330 282 372 282"/><path class="ac" d="M360 272l12 10-12 10"/><rect x="388" y="66" width="160" height="52" rx="6"/><path d="M401 108 L442 91 L471 100 L500 87 L535 103"/><rect x="388" y="152" width="66" height="66" rx="6"/><path d="M393 205 L410 184 L422 196 L434 178 L449 200"/><rect x="470" y="140" width="52" height="90" rx="10"/><path d="M488 148h16"/><rect x="388" y="254" width="120" height="58" rx="4"/><path d="M396 262h8M396 304h8"/><path d="M414 262h8M414 304h8"/><path d="M432 262h8M432 304h8"/><path d="M450 262h8M450 304h8"/><path d="M468 262h8M468 304h8"/><path d="M486 262h8M486 304h8"/></svg></div><b>書き出す</b><p>X・Bluesky・Instagram など、投稿先のサイズを選んでまとめて書き出せます。GIF や ZIP にまとめることもできます。</p></li>
+    </ol>
+  </div>
+</section>
 
-        <figure class="hero-product hero-gallery" aria-label="Cabinaでできることの画面ギャラリー" data-hero-gallery>
-          <div class="hero-gallery-frame">
-            <div class="hero-gallery-stage">
-              <div class="hero-gallery-panel is-active" id="hero-gallery-overview" role="group" aria-label="写真やスクリーンショットを一覧で管理する">
-                <img class="hero-app-screen" src="assets/hero-library-overview-screen.png" alt="多数の写真とスクリーンショットを一覧で管理するCabinaの画面" />
-              </div>
-              <div class="hero-gallery-panel" id="hero-gallery-text" role="group" aria-label="文字を入れて投稿用に仕上げる" hidden>
-                <img class="hero-app-screen" src="assets/hero-text-overlay-screen.png" alt="写真に文字を入れて仕上げるCabinaの画面" />
-              </div>
-              <div class="hero-gallery-panel" id="hero-gallery-select" role="group" aria-label="一枚から似た写真をたどる" hidden>
-                <img class="hero-app-screen" src="assets/hero-similar-browser-screen.png" alt="一枚の写真から似た写真をたどるCabinaの画面" />
-              </div>
-              <div class="hero-gallery-panel" id="hero-gallery-gif" role="group" aria-label="複数の写真をGIFとして書き出す" hidden>
-                <img class="hero-app-screen" src="assets/hero-gif-export-screen.png" alt="複数の写真をGIFとして書き出すCabinaの画面" />
-              </div>
-            </div>
-            <button class="hero-gallery-arrow previous" type="button" aria-label="前の機能を見る" data-hero-gallery-previous>&lt;</button>
-            <button class="hero-gallery-arrow next" type="button" aria-label="次の機能を見る" data-hero-gallery-next>&gt;</button>
-          </div>
-          <figcaption class="hero-gallery-controls">
-            <span class="hero-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中">
-              <i class="is-active" data-hero-gallery-dot></i><i data-hero-gallery-dot></i><i data-hero-gallery-dot></i><i data-hero-gallery-dot></i>
-            </span>
-          </figcaption>
-        </figure>
+<!-- ▼ Feature（HPのServiceと同じ：左に縦の項目、右に中身が切り替わる） -->
+<section class="sec" id="feature">
+  <div class="wrap">
+    <h2 class="title wipe"><span>Feature</span></h2>
+    <div class="browser">
+      <div class="tablist" role="tablist" aria-orientation="vertical"><button role="tab" aria-selected="true" style="--c:var(--orange)">キーワード検索</button><button role="tab" aria-selected="false" style="--c:var(--green)">似ている写真の表示機能</button><button role="tab" aria-selected="false" style="--c:var(--blue)">お気に入り機能</button><button role="tab" aria-selected="false" style="--c:var(--pink)">切り抜き・明るさ調整</button><button role="tab" aria-selected="false" style="--c:#9a9a9a">コピー保存</button></div>
+      <div class="panels">
+        <div class="panel on" style="--c:var(--orange)"><div class="screen"><svg class="ill" viewBox="0 0 600 375" role="img" aria-label="「料理」と入れると、料理が写った画像だけが選ばれるところ"><rect x="150" y="46" width="300" height="46" rx="23"/><circle cx="180" cy="69" r="9"/><path d="M187 76l8 8"/><path class="ac" d="M212 69h64"/><path class="ac" d="M290 58v22"/><rect class="s" x="105" y="150" width="120" height="90" rx="8"/><path class="s" d="M117 222 L146 197 L165 209 L187 190 L213 217"/><circle class="s" cx="194" cy="174" r="6"/><rect x="240" y="150" width="120" height="90" rx="8"/><path d="M252 222 L281 197 L300 209 L322 190 L348 217"/><circle cx="329" cy="174" r="6"/><rect class="s" x="375" y="150" width="120" height="90" rx="8"/><path class="s" d="M387 222 L416 197 L435 209 L457 190 L483 217"/><circle class="s" cx="464" cy="174" r="6"/><rect class="ac" x="232" y="142" width="136" height="106" rx="12"/><circle class="af" cx="360" cy="146" r="13"/><path class="wk" d="M354 146l4 5 9-10"/><rect class="s" x="172" y="268" width="120" height="72" rx="8"/><path class="s" d="M184 326 L213 305 L232 316 L254 300 L280 321"/><circle class="s" cx="261" cy="287" r="5"/><rect x="308" y="268" width="120" height="72" rx="8"/><path d="M320 326 L349 305 L368 316 L390 300 L416 321"/><circle cx="397" cy="287" r="5"/><rect class="ac" x="300" y="260" width="136" height="88" rx="12"/><circle class="af" cx="428" cy="264" r="13"/><path class="wk" d="M422 264l4 5 9-10"/></svg></div><p>「料理」「夜景」のように、写っているものを言葉で探せます。ファイル名を覚えていなくても見つかります。</p></div>
+        <div class="panel" style="--c:var(--green)"><div class="screen"><svg class="ill" viewBox="0 0 600 375" role="img" aria-label="1枚を選ぶと、近いカットが周りに集まるところ"><rect x="210" y="110" width="180" height="135" rx="12"/><path d="M224 218 L271 175 L304 199 L336 164 L376 207"/><circle cx="343" cy="142" r="11"/><g transform="rotate(-6 115 104)"><rect class="s" x="70" y="70" width="90" height="68" rx="8"/><path class="s" d="M77 124 L101 103 L117 115 L133 97 L153 119"/></g><g transform="rotate(6 485 94)"><rect class="s" x="440" y="60" width="90" height="68" rx="8"/><path class="s" d="M447 114 L471 93 L487 105 L503 87 L523 109"/></g><g transform="rotate(4 135 284)"><rect class="s" x="90" y="250" width="90" height="68" rx="8"/><path class="s" d="M97 304 L121 283 L137 295 L153 277 L173 299"/></g><g transform="rotate(-5 475 274)"><rect class="s" x="430" y="240" width="90" height="68" rx="8"/><path class="s" d="M437 294 L461 273 L477 285 L493 267 L513 289"/></g><path class="ac dash" d="M210 150C185 130 175 120 160 110"/><path class="ac dash" d="M390 145C420 125 430 115 440 105"/><path class="ac dash" d="M215 240C195 255 185 265 180 275"/><path class="ac dash" d="M385 240C410 255 420 262 430 270"/><circle class="af" cx="300" cy="300" r="4"/><circle class="af" cx="286" cy="300" r="3"/><circle class="af" cx="314" cy="300" r="3"/></svg></div><p>気になる1枚を選ぶと、近いカットが横に並びます。埋もれていた写真も候補に入ります。</p></div>
+        <div class="panel" style="--c:var(--blue)"><div class="screen"><svg class="ill" viewBox="0 0 600 375" role="img" aria-label="星を付けた画像が、お気に入りの列にまとまるところ"><rect class="s" x="105" y="70" width="120" height="90" rx="8"/><path class="s" d="M117 142 L146 117 L165 129 L187 110 L213 137"/><circle class="s" cx="194" cy="94" r="6"/><rect x="240" y="58" width="120" height="90" rx="8"/><path d="M252 130 L281 105 L300 117 L322 98 L348 125"/><circle cx="329" cy="82" r="6"/><rect class="s" x="375" y="70" width="120" height="90" rx="8"/><path class="s" d="M387 142 L416 117 L435 129 L457 110 L483 137"/><circle class="s" cx="464" cy="94" r="6"/><path class="ac" d="M352.0 45.0 L356.5 55.8 L368.2 56.7 L359.3 64.4 L362.0 75.8 L352.0 69.7 L342.0 75.8 L344.7 64.4 L335.8 56.7 L347.5 55.8Z"/><path class="ac dash" d="M300 160v46"/><path class="ac" d="M291 196l9 10 9-10"/><rect x="150" y="226" width="300" height="84" rx="12"/><path class="ac" d="M184.0 256.0 L187.2 263.6 L195.4 264.3 L189.1 269.7 L191.1 277.7 L184.0 273.4 L176.9 277.7 L178.9 269.7 L172.6 264.3 L180.8 263.6Z"/><path d="M206 268h40" class="s"/><rect x="262" y="240" width="80" height="56" rx="8"/><path d="M270 285 L289 269 L302 277 L316 265 L334 281"/><circle cx="321" cy="255" r="4"/><rect class="s" x="354" y="240" width="80" height="56" rx="8"/><path class="s" d="M362 285 L381 269 L394 277 L408 265 L426 281"/><circle class="s" cx="413" cy="255" r="4"/></svg></div><p>また使いたい1枚に星を付けて、まとめて見返せます。</p></div>
+        <div class="panel" style="--c:var(--pink)"><div class="screen"><svg class="ill" viewBox="0 0 600 375" role="img" aria-label="向きを変え、切り抜く範囲を決め、明るさを整えるところ"><rect class="s" x="130" y="70" width="240" height="180" rx="12"/><path class="s" d="M149 214 L212 156 L255 189 L298 142 L351 200"/><circle class="s" cx="308" cy="113" r="14"/><path class="ac" d="M168 132v-28h28M332 104h28v28M360 216v28h-28M196 244h-28v-28"/><path class="ac dash" d="M196 104h136M360 132v84M332 244H196M168 216v-84"/><path d="M118 300a40 40 0 0 1 66-30"/><path d="M176 262l9 9-12 4"/><circle cx="440" cy="130" r="18"/><path d="M440 98v-10M440 172v-10M408 130h-10M482 130h-10M417 107l-7-7M470 160l-7-7M463 107l7-7M410 160l7-7"/><path d="M410 240h120"/><circle class="ac" cx="490" cy="240" r="10"/><path d="M410 280h120"/><circle class="ac" cx="450" cy="280" r="10"/></svg></div><p>向きを変える、残したい範囲を切り抜く、明るさや彩度を整える。投稿の前のちょっとした調整がその場でできます。</p></div>
+        <div class="panel" style="--c:#9a9a9a"><div class="screen"><svg class="ill" viewBox="0 0 600 375" role="img" aria-label="元の画像はそのままで、編集した画像を別のファイルとして保存するところ"><path d="M110 98a8 8 0 0 1 8-8H234l26 26V272a8 8 0 0 1-8 8H118a8 8 0 0 1-8-8z"/><path d="M234 90v26h26"/><path d="M133 212 L161 183 L181 199 L201 176 L225 205"/><circle cx="205" cy="162" r="7"/><path class="ac" d="M282 185h44"/><path class="ac" d="M316 175l10 10-10 10"/><path d="M345 98a8 8 0 0 1 8-8H469l26 26V272a8 8 0 0 1-8 8H353a8 8 0 0 1-8-8z"/><path d="M469 90v26h26"/><path d="M368 212 L396 183 L416 199 L436 176 L460 205"/><circle cx="440" cy="162" r="7"/><path class="ac" d="M452 246l26-26 10 10-26 26-14 4z"/><path class="s" d="M124 250h70"/><path class="s" d="M359 250h52"/></svg></div><p>編集した画像は別のファイルとして保存します。元の画像は変わりません。</p></div>
       </div>
-    </section>
-    <!-- ▲ [hero] -->
-
-    <!-- ▼ [how-it-works] 初回と次回以降の違いを正直に伝える -->
-    <section class="how-it-works" id="how-it-works" aria-labelledby="how-title">
-      <div class="container split-heading">
-        <div><h2 id="how-title">写真や素材を、<br />使える形に。</h2></div>
-        <p>写真や素材をまとめて、ラベルや似た写真から選ぶ。<br />複数編集・文字入れ・書き出しまで、ひとつの場所で。</p>
-      </div>
-      <div class="container timeline">
-        <article class="timeline-card first">
-          <h3>まとめて、分けて、<br />使えるように。</h3>
-          <p>フォルダを追加し、写真や素材を一覧にまとめる。<br />ラベルで分ければ、必要なものだけ見られます。</p>
-          <figure class="timeline-visual card-gallery" aria-label="写真や素材をまとめて管理する手順" data-card-gallery>
-            <div class="card-gallery-stage">
-              <div class="card-gallery-panel is-active" role="group" aria-label="フォルダを追加する">
-                <img src="assets/card-library-add-folder.png" alt="写真フォルダをCabinaへ追加する画面" />
-              </div>
-              <div class="card-gallery-panel" role="group" aria-label="複数の写真にラベルを付ける" hidden>
-                <img src="assets/card-library-label-select.png" alt="複数の写真をラベルへ追加する画面" />
-              </div>
-              <div class="card-gallery-panel" role="group" aria-label="ラベルで写真を絞り込む" hidden>
-                <img src="assets/card-library-filtered.png" alt="ゲームのラベルで写真を絞り込んだ画面" />
-              </div>
-            </div>
-            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous>&lt;</button>
-            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next>&gt;</button>
-            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中">
-              <i class="is-active" data-card-gallery-dot></i><i data-card-gallery-dot></i><i data-card-gallery-dot></i>
-            </figcaption>
-          </figure>
-        </article>
-        <article class="timeline-card ready">
-          <h3>選んだ写真を、<br />まとめて整える。</h3>
-          <p>明るさや彩度を、選んだ写真にまとめて反映。<br />文字やロゴを入れて、仕上げることができます。</p>
-          <figure class="timeline-visual card-gallery" aria-label="一枚または複数枚の写真を整える手順" data-card-gallery>
-            <div class="card-gallery-stage">
-              <div class="card-gallery-panel is-active" role="group" aria-label="一枚の写真を調整する">
-                <img src="assets/card-edit-single.png" alt="一枚の写真の明るさや露出を調整するCabinaの画面" />
-              </div>
-              <div class="card-gallery-panel" role="group" aria-label="複数の写真を選ぶ" hidden>
-                <img src="assets/card-edit-multiple-select.png" alt="複数の写真を選択して編集するCabinaの画面" />
-              </div>
-              <div class="card-gallery-panel" role="group" aria-label="選んだ写真を見比べる" hidden>
-                <img src="assets/card-edit-selection-review.png" alt="選んだ複数の写真を見比べるCabinaの画面" />
-              </div>
-              <div class="card-gallery-panel" role="group" aria-label="文字をすべての画像へ適用する" hidden>
-                <img src="assets/card-edit-text-apply-all.png" alt="文字を複数の画像へ適用するCabinaの画面" />
-              </div>
-            </div>
-            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous>&lt;</button>
-            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next>&gt;</button>
-            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中">
-              <i class="is-active" data-card-gallery-dot></i><i data-card-gallery-dot></i><i data-card-gallery-dot></i><i data-card-gallery-dot></i>
-            </figcaption>
-          </figure>
-        </article>
-        <article class="timeline-card watch">
-          <h3>使う場所に合わせて、<br />書き出す。</h3>
-          <p>用途に合うサイズで画像を保存。<br />複数の写真はGIFやZIPにまとめて書き出せます。</p>
-          <figure class="timeline-visual card-gallery" aria-label="画像を用途に合わせて書き出す手順" data-card-gallery>
-            <div class="card-gallery-stage">
-              <div class="card-gallery-panel is-active" role="group" aria-label="SNS向けサイズで画像を切り抜く">
-                <img src="assets/card-export-sns-size.png" alt="SNS投稿サイズに合わせて画像をトリミングするCabinaの画面" />
-              </div>
-              <div class="card-gallery-panel" role="group" aria-label="複数の写真をGIFにする" hidden>
-                <img src="assets/card-export-gif.png" alt="複数の写真からGIFを作成するCabinaの画面" />
-              </div>
-              <div class="card-gallery-panel" role="group" aria-label="複数の写真をZIPにまとめる" hidden>
-                <img src="assets/card-export-zip.png" alt="複数の写真をZIPにまとめて保存するCabinaの画面" />
-              </div>
-            </div>
-            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous>&lt;</button>
-            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next>&gt;</button>
-            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中">
-              <i class="is-active" data-card-gallery-dot></i><i data-card-gallery-dot></i><i data-card-gallery-dot></i>
-            </figcaption>
-          </figure>
-        </article>
-      </div>
-    </section>
-    <!-- ▲ [how-it-works] -->
-
-    <!-- ▼ [find] 「探す」「使う」を少ないカードで見せる -->
-    <section class="find" id="find" aria-labelledby="find-title"><div class="container split-heading light"><div><h2 id="find-title">速く開けて<br />速く見つける</h2></div><p>Cabinaの目標は、スクショをためることではありません。見つけて、すぐ使う。そのための道筋を短くすることです。</p></div><div class="container feature-grid"><article class="feature-card search-feature"><div><h3>言葉で探す</h3><p>日付やファイル名を覚えていなくても、「料理」などの単語から探せます</p></div><figure class="search-demo card-gallery" aria-label="料理という言葉で写真を検索する手順" data-card-gallery><div class="card-gallery-stage"><div class="card-gallery-panel is-active" role="group" aria-label="料理と入力する"><img src="assets/card-find-word-input.png" alt="料理という言葉を入力して写真を探すCabinaの画面" /></div><div class="card-gallery-panel" role="group" aria-label="料理の写真が表示される" hidden><img src="assets/card-find-word-result.png" alt="料理という言葉で写真を検索したCabinaの画面" /></div></div><button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous>&lt;</button><button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next>&gt;</button><figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中"><i class="is-active" data-card-gallery-dot></i><i data-card-gallery-dot></i></figcaption></figure></article><article class="feature-card similar-feature"><div><h3>一枚から似た写真をたどる</h3><p>近い雰囲気の写真を手がかりに、埋もれてた写真を探せます</p></div><figure class="similar-demo card-gallery" aria-label="一枚から似た写真を探す手順" data-card-gallery><div class="card-gallery-stage"><div class="card-gallery-panel is-active" role="group" aria-label="似た写真の候補を見る"><img src="assets/card-find-similar-candidates.png" alt="一枚の写真を起点に似た候補を表示するCabinaの画面" /></div><div class="card-gallery-panel" role="group" aria-label="候補の写真を大きく見る" hidden><img src="assets/card-find-similar-preview.png" alt="似た候補の写真を大きく表示するCabinaの画面" /></div></div><button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous>&lt;</button><button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next>&gt;</button><figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中"><i class="is-active" data-card-gallery-dot></i><i data-card-gallery-dot></i></figcaption></figure></article><article class="feature-card favorite-feature"><div><h3>お気に入りの写真をまとめる</h3><p>また使いたい一枚は、星を付けてまとめておけます</p></div><figure class="favorite-demo card-gallery" aria-label="写真をお気に入りに追加して一覧から見る手順" data-card-gallery><div class="card-gallery-stage"><div class="card-gallery-panel is-active" role="group" aria-label="写真をお気に入りに追加する"><img src="assets/card-find-favorite-add.png" alt="写真をお気に入りに追加するCabinaの画面" /></div><div class="card-gallery-panel" role="group" aria-label="お気に入り一覧を見る" hidden><img src="assets/card-find-favorite-list.png" alt="お気に入りの写真だけを一覧表示するCabinaの画面" /></div></div><button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous>&lt;</button><button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next>&gt;</button><figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中"><i class="is-active" data-card-gallery-dot></i><i data-card-gallery-dot></i></figcaption></figure></article></div></section>
-    <!-- ▲ [find] -->
-
-    <!-- ▼ [edit-and-save] 編集とコピー保存を3カードで見せる -->
-    <section class="edit-save" id="edit-save" aria-labelledby="edit-save-title">
-      <div class="container split-heading light">
-        <div><h2 id="edit-save-title">投稿にも、<br />共有にも。</h2></div>
-        <p>ヘッダーやアイコン用の画像、GIF、ZIPまで。<br />使う場所に合わせて、まとめて書き出せます。</p>
-      </div>
-      <div class="container edit-save-grid">
-        <article class="edit-save-card crop-card">
-          <div><h3>ヘッダーやアイコンを、<br />ちょうどいい形に。</h3><p>使う場所のサイズを選んで、<br />残したい範囲だけを切り抜けます。</p></div>
-          <figure class="crop-mock card-gallery" aria-label="用途に合うサイズを選んで写真を切り抜く手順" data-card-gallery>
-            <div class="card-gallery-stage">
-              <div class="card-gallery-panel is-active" role="group" aria-label="使う場所のサイズを選ぶ"><img src="assets/card-export-size-picker.png" alt="書き出し先のサイズを選ぶCabinaの画面" /></div>
-              <div class="card-gallery-panel" role="group" aria-label="ヘッダー用の横長サイズに切り抜く" hidden><img src="assets/card-export-header-crop.png" alt="ヘッダー用の横長サイズで切り抜くCabinaの画面" /></div>
-              <div class="card-gallery-panel" role="group" aria-label="アイコン用の正方形サイズに切り抜く" hidden><img src="assets/card-export-icon-crop.png" alt="アイコン用の正方形サイズで切り抜くCabinaの画面" /></div>
-            </div>
-            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous>&lt;</button>
-            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next>&gt;</button>
-            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中"><i class="is-active" data-card-gallery-dot></i><i data-card-gallery-dot></i><i data-card-gallery-dot></i></figcaption>
-          </figure>
-        </article>
-        <article class="edit-save-card rotate-card">
-          <div><h3>写真を、GIFにする。</h3><p>選んだ写真をひとつのGIFにまとめて、<br />そのまま保存できます。</p></div>
-          <figure class="brightness-demo card-gallery" aria-label="選んだ写真をGIFとして保存する手順" data-card-gallery>
-            <div class="card-gallery-stage">
-              <div class="card-gallery-panel is-active" role="group" aria-label="GIFにする写真を選ぶ"><img src="assets/card-export-gif-frames.png" alt="GIFにまとめる写真を選ぶCabinaの画面" /></div>
-              <div class="card-gallery-panel" role="group" aria-label="GIFの設定をして保存する" hidden><img src="assets/card-export-gif-settings.png" alt="GIFの間隔や大きさを設定して保存するCabinaの画面" /></div>
-            </div>
-            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous>&lt;</button>
-            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next>&gt;</button>
-            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中"><i class="is-active" data-card-gallery-dot></i><i data-card-gallery-dot></i></figcaption>
-          </figure>
-        </article>
-        <article class="edit-save-card copy-card">
-          <div><h3>写真を、ZIPにまとめる。</h3><p>送りたい写真をまとめて選んで、<br />ひとつのZIPとして保存できます。</p></div>
-          <figure class="copy-demo card-gallery" aria-label="選んだ写真をZIPにまとめて保存する画面" data-card-gallery>
-            <div class="card-gallery-stage">
-              <div class="card-gallery-panel is-active" role="group" aria-label="選んだ写真をZIPにまとめて保存する"><img src="assets/card-export-zip-select.png" alt="選んだ写真をZIPにまとめて保存するCabinaの画面" /></div>
-            </div>
-            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous hidden>&lt;</button>
-            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next hidden>&gt;</button>
-            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中"><i class="is-active" data-card-gallery-dot></i></figcaption>
-          </figure>
-        </article>
-      </div>
-    </section>
-    <!-- ▲ [edit-and-save] -->
-
-    <!-- ▼ [batch-edit] 複数枚に同じ調整を反映できることを見せる -->
-    <section class="batch-edit" id="batch-edit" aria-labelledby="batch-edit-title">
-      <div class="container split-heading light">
-        <div><h2 id="batch-edit-title">複数枚編集も<br />可能。</h2></div>
-        <p>1枚でも複数枚でも。<br />明るさや文字入れを、まとめて反映できます。</p>
-      </div>
-      <div class="container batch-edit-grid">
-        <article class="batch-edit-card select-card">
-          <div><h3>明るさや彩度を、<br />まとめて。</h3><p>選んだ写真の明るさや彩度を整えて、すべてに一括で反映できます。</p></div>
-          <figure class="batch-edit-visual select-visual card-gallery" aria-label="複数枚の明るさや彩度をまとめて調整する手順" data-card-gallery>
-            <div class="card-gallery-stage">
-              <div class="card-gallery-panel is-active" role="group" aria-label="元の写真を見る">
-                <img src="assets/card-batch-adjust-before.png" alt="明るさや彩度を調整する前のCabinaの画面" />
-              </div>
-              <div class="card-gallery-panel" role="group" aria-label="明るさや彩度を調整する" hidden>
-                <img src="assets/card-batch-adjust-controls.png" alt="明るさや彩度を調整するCabinaの画面" />
-              </div>
-              <div class="card-gallery-panel" role="group" aria-label="調整後の写真を見る" hidden>
-                <img src="assets/card-batch-adjust-applied.png" alt="明るさや彩度を調整したCabinaの画面" />
-              </div>
-            </div>
-            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous>&lt;</button>
-            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next>&gt;</button>
-            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中">
-              <i class="is-active" data-card-gallery-dot></i><i data-card-gallery-dot></i><i data-card-gallery-dot></i>
-            </figcaption>
-          </figure>
-        </article>
-        <article class="batch-edit-card adjust-card">
-          <div><h3>文字や画像も、<br />まとめて。</h3><p>文字入れや画像の追加も、選んだ写真すべてに一括で反映できます。</p></div>
-          <figure class="batch-edit-visual adjust-visual card-gallery" aria-label="複数枚に文字をまとめて反映する手順" data-card-gallery>
-            <div class="card-gallery-stage">
-              <div class="card-gallery-panel is-active" role="group" aria-label="文字を入れる写真を選ぶ">
-                <img src="assets/card-batch-text-before.png" alt="文字を入れる前のCabinaの画面" />
-              </div>
-              <div class="card-gallery-panel" role="group" aria-label="文字を調整する" hidden>
-                <img src="assets/card-batch-text-controls.png" alt="文字入れを調整するCabinaの画面" />
-              </div>
-              <div class="card-gallery-panel" role="group" aria-label="文字を複数枚に反映する" hidden>
-                <img src="assets/card-batch-text-applied.png" alt="文字を複数枚に反映したCabinaの画面" />
-              </div>
-            </div>
-            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous>&lt;</button>
-            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next>&gt;</button>
-            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中">
-              <i class="is-active" data-card-gallery-dot></i><i data-card-gallery-dot></i><i data-card-gallery-dot></i>
-            </figcaption>
-          </figure>
-        </article>
-        <article class="batch-edit-card text-card">
-          <div><h3>SNS用に、<br />まとめて書き出す。</h3><p>選んだ写真をSNSに合うサイズで、まとめて保存できます。</p></div>
-          <figure class="batch-edit-visual text-visual card-gallery" aria-label="複数枚の写真を書き出すCabinaの画面" data-card-gallery>
-            <div class="card-gallery-stage">
-              <div class="card-gallery-panel is-active" role="group" aria-label="複数枚の写真を書き出す">
-                <img src="assets/card-batch-export.png" alt="複数枚の写真を書き出すCabinaの画面" />
-              </div>
-            </div>
-            <button class="card-gallery-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-previous hidden>&lt;</button>
-            <button class="card-gallery-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-next hidden>&gt;</button>
-            <figcaption class="card-gallery-pagination" role="status" aria-live="polite" aria-label="1枚目を表示中">
-              <i class="is-active" data-card-gallery-dot></i>
-            </figcaption>
-          </figure>
-        </article>
-      </div>
-    </section>
-    <!-- ▲ [batch-edit] -->
-
-    <!-- ▼ [faq] 購入前の最低限の疑問だけに答える -->
-    <section class="faq" id="faq" aria-labelledby="faq-title"><div class="container faq-layout"><div><h2 id="faq-title">Cabinaをもっと、<br />知ってください。</h2></div><div class="faq-list"><details><summary>料金はいくらですか？</summary><p>買い切り2,000円（税込）です。一度購入すれば追加料金なしで使えます。30日間はすべての機能を無料でお試しいただけます。</p></details><details><summary>アカウント登録は必要ですか？</summary><p>必要ありません。Cabinaはオフラインで動かせるアプリです。アプリをダウンロードする時だけはインターネット環境が必要ですが、それ以外は完全オフラインで動作します。</p></details><details><summary>元のスクリーンショットは移動されますか？</summary><p>いいえ。Cabinaは元のファイルを移動・コピーせず、追加したフォルダをライブラリとして扱います。</p></details><details><summary>初回の取り込みには時間がかかりますか？</summary><p>Cabinaはスクリーンショットをすぐ使える一覧にするWindowsアプリです。最初に一度だけ取り込み、フォルダ内の写真数に応じてライブラリ作成の時間がかかります。次からは、開いた瞬間に一覧を表示します。</p></details><details><summary>対応環境は何ですか？</summary><p>Windows 10 / 11（64bit）に対応しています。Mac・スマートフォンには対応していません。<br />CPU: 64bit のプロセッサ（4コア以上を推奨）<br />メモリ: 8GB 以上<br />空き容量: 1GB 以上<br />ダウンロード: 約343MB（zip形式）<br />動作にインターネット接続は必要ありません。</p></details><details><summary>複数のフォルダを登録できますか？</summary><p>できます。ゲームごと・用途ごとなど、複数の保存先をまとめて扱えます。</p></details><details><summary>写真はどこかに送られますか？</summary><p>いいえ。Cabinaはインターネットに接続しません。写真を見分ける仕組み（AIモデル）もアプリの中に入っているため、写真が外に出ることはありません。アカウント登録も不要です。</p></details><details><summary>どうやって写真の中身が分かるのですか？</summary><p>Googleが公開している画像認識モデル「SigLIP2」をアプリに組み込んでいます。写真に何が写っているかを数値に置き換え、言葉との近さで探します。ファイル名やフォルダ名は使いません。</p></details><details><summary>なぜアプリのサイズが大きいのですか？</summary><p>写真を見分けるモデル本体（約350MB）をアプリに同梱しているためです。外部のサーバーへ送らず、お手元で処理するための構成です。</p></details><details><summary>専用のグラフィックボードは必要ですか？</summary><p>必要ありません。CPUだけで動きます。開発時は6コアのノート用CPU（専用グラフィックなし）で動作を確認しています。</p></details><details><summary>機械学習とは何ですか？</summary><p>たくさんの「写真」と「その説明文」の組み合わせを見せて、写真に何が写っているかを見分けられるようにした仕組みです。「猫」という言葉と、猫が写った写真が近いものだと分かるようになるため、ファイル名に「猫」と入っていなくても探せます。<br />Cabinaは学習を済ませたものを組み込んで使っており、お客様の写真で学習することはありません。</p></details><details><summary>撮影日が「日付不明」になるのはなぜですか？</summary><p>撮影日時は、写真のファイルに記録された情報から読み取っています。スマートフォンやデジタルカメラで撮った写真には撮影日時が記録されていますが、スクリーンショットには記録されないことが多く、その場合は「日付不明」にまとまります。画像を加工・編集すると記録が失われることもあります。<br />日付が分からないものも、写っているもので探したり、フォルダからたどったりできます。</p></details></div></div></section>
-    <!-- ▲ [faq] -->
-
-    <!-- ▼ [purchase] 購入先URL確定後に href を置き換える -->
-    <section class="purchase" id="purchase" aria-labelledby="purchase-title"><div class="container purchase-card"><img class="purchase-icon" src="assets/cabina-icon.svg" alt="" width="112" height="112" /><div class="purchase-copy"><h2 id="purchase-title">Cabinaはサブスクリプション不要です。</h2><p>アプリインストールは無料体験版です。<br />30日間すべての機能を体験できます。</p><a class="primary-button uiverse-glow-button" href="https://github.com/officelib/cabina-releases/releases/latest/download/Cabina-setup.zip">Windows版をダウンロード</a><nav class="purchase-legal-links" aria-label="法務情報"><a href="tokushoho.html">特定商取引法に基づく表記</a><a href="terms.html">利用規約</a><a href="privacy.html">プライバシーポリシー</a></nav></div></div></section>
-    <!-- ▲ [purchase] -->
-  </main>
-  <dialog class="card-gallery-lightbox" data-card-gallery-lightbox aria-label="説明カードの画像を拡大表示">
-    <div class="card-gallery-lightbox-content">
-      <button class="card-gallery-lightbox-close" type="button" aria-label="拡大表示を閉じる" data-card-gallery-lightbox-close>&times;</button>
-      <img data-card-gallery-lightbox-image src="" alt="" />
-      <button class="card-gallery-lightbox-arrow previous" type="button" aria-label="前の画面を見る" data-card-gallery-lightbox-previous>&lt;</button>
-      <button class="card-gallery-lightbox-arrow next" type="button" aria-label="次の画面を見る" data-card-gallery-lightbox-next>&gt;</button>
-      <p class="card-gallery-lightbox-count" aria-live="polite" data-card-gallery-lightbox-count></p>
     </div>
-  </dialog>
+  </div>
+</section>
+
+<!-- ▼ Price（HPのHoursと同じ暗い地。項目に色の下線） -->
+<section class="sec dark" id="price">
+  <svg class="planes" id="planes3" aria-hidden="true"></svg>
+  <div class="wrap row">
+    <h2 class="title wipe dark-t"><span>Price</span></h2>
+    <div class="side">
+      <p class="copy light">買い切り <span data-price></span>。<br>まず30日間、全部の機能を試せます。</p>
+      <ul class="days">
+        <li style="--c:var(--orange)"><span class="v"><span class="en">30</span>日間</span><small>すべての機能を無料で</small></li>
+        <li style="--c:var(--green)"><span class="v"><span class="en">0</span>円</span><small>月額の支払い</small></li>
+        <li style="--c:var(--blue)"><span class="v">オフライン</span><small>ネットにつながずに使える</small></li>
+        <li style="--c:var(--pink)"><span class="v">そのまま</span><small>元の画像は書き換えない</small></li>
+      </ul>
+      <div class="cta">
+        <a class="btn main" href="https://buy.stripe.com/cNibJ38a38l70pH58Q5gc03" data-cta="purchase" data-where="price">購入する <span data-price class="en"></span></a>
+        <a class="btn sub" href="https://github.com/officelib/cabina-releases/releases/latest/download/Cabina-setup.zip" data-cta="trial" data-where="price">30日間無料で試す</a>
+      </div>
+      <p class="note">Windows 10 / 11（64bit）。カード・PayPay で支払えます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ▼ FAQ（大きい英字＋右にアコーディオン） -->
+<section class="sec" id="faq">
+  <div class="wrap row">
+    <h2 class="title wipe"><span>FAQ</span></h2>
+    <div class="side">
+      <details open><summary>料金はいくらですか？</summary><p>買い切りで <span data-price></span> です。月額の支払いはありません。</p></details>
+      <details><summary>体験版では何ができますか？</summary><p>30日間、すべての機能を使えます。アカウント登録はいりません。</p></details>
+      <details><summary>元の画像は書き換えられますか？</summary><p>いいえ。元の画像は移動も変更もしません。編集した画像は、別のファイルとして保存します。</p></details>
+      <details><summary>画像はどこで処理されますか？</summary><p>すべて、お使いのパソコンの中で処理します。画像を見分ける仕組み（Google が公開している画像認識モデル「SigLIP2」）もアプリに入っているので、インターネットにつながずに使えます。</p></details>
+      <details><summary>対応しているパソコンは？</summary><p>Windows 10 / 11（64bit）です。Mac とスマートフォンには対応していません。メモリ 8GB 以上、空き容量 1GB 以上を推奨します。専用のグラフィックボードはいりません。</p></details>
+      <details><summary>最初の読み込みに時間はかかりますか？</summary><p>フォルダを登録したときに、一度だけ画像を読み込みます。枚数に応じて時間がかかりますが、次からはすぐに一覧が出ます。</p></details>
+      <details><summary>アプリのサイズが大きいのはなぜですか？</summary><p>画像を見分ける仕組み（約350MB）をアプリに入れているためです。パソコンの中だけで処理するための作りです。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ▼ 最後の案内（元のLPの形を残す：アイコン・見出し・説明・ボタンを中央に） -->
+<section class="sec closing" id="download">
+  <svg class="planes" id="planes4" aria-hidden="true"></svg>
+  <div class="wrap closing-in">
+    <img class="app-icon" src="assets/cabina-icon.svg" alt="Cabina のアイコン" width="112" height="112">
+    <h2>Cabinaはサブスクリプション不要です。</h2>
+    <div class="cta center-cta">
+      <a class="btn dark" href="https://github.com/officelib/cabina-releases/releases/latest/download/Cabina-setup.zip" data-cta="trial" data-where="closing">30日間無料で試す</a>
+      <a class="btn line" href="https://buy.stripe.com/cNibJ38a38l70pH58Q5gc03" data-cta="purchase" data-where="closing">購入する <span data-price class="en"></span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span class="en">Cabina by office lib.</span>
+    <nav><a href="tokushoho.html">特定商取引法に基づく表記</a><a href="terms.html">利用規約</a><a href="privacy.html">プライバシーポリシー</a></nav>
+    <span class="en">© 2026 office lib.</span>
+  </div>
+</footer>
 </body>
 </html>
